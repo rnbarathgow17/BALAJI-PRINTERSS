@@ -749,6 +749,9 @@ var WHATSAPP_NUMBER = '919787570081';
   }
   var canFileShare = false;
   try { canFileShare = !!(navigator.canShare && navigator.share && navigator.canShare({files: [new File(['x'], 'test.jpg', {type: 'image/jpeg'})]})); } catch(e){}
+  if(canFileShare){
+    note.innerHTML = 'Tap once, choose <b>WhatsApp</b>, then pick <b>Balaji Printerss</b>. Your photos and order details go together.<br>First time messaging us? Save our number <b>+91 97875 70081</b> in your phone first.';
+  }
   if(!canFileShare){
     b2.querySelector('span:last-child').innerHTML = 'Attach your pictures in WhatsApp<small>In the Balaji Printerss chat, tap the \ud83d\udcce attach button and choose the same pictures.</small>';
   }
@@ -805,8 +808,10 @@ var WHATSAPP_NUMBER = '919787570081';
         .then(function(r){ if(!r.ok) throw new Error('upload'); return r.json(); })
         .then(function(j){ done++; label.textContent = 'Uploading ' + done + ' of ' + files.length + '\u2026'; return f.name + ': ' + j.secure_url; });
     })).then(function(links){
-      mainBtn.disabled = false; label.textContent = 'Send on WhatsApp';
-      showSteps(text + '\n\nFiles:\n' + links.join('\n'), []);
+      label.textContent = 'Opening WhatsApp\u2026';
+      note.textContent = 'Your pictures are uploaded. WhatsApp is opening with everything ready, just press send.';
+      setTimeout(function(){ mainBtn.disabled = false; label.textContent = 'Send on WhatsApp'; }, 4000);
+      window.location.href = waUrl(text + '\n\nFiles:\n' + links.join('\n'));
     }).catch(function(){
       mainBtn.disabled = false; label.textContent = 'Send on WhatsApp';
       errEl.textContent = 'Upload did not work. You can still send the files directly on WhatsApp.';
@@ -826,6 +831,18 @@ var WHATSAPP_NUMBER = '919787570081';
     var files = allFiles();
     if(!files.length){ window.open(waUrl(text), '_blank', 'noopener'); return; }
     if(CLOUD_NAME && UPLOAD_PRESET){ uploadAll(files, text); return; }
+    // ONE TAP: photos + order details shared together straight into WhatsApp
+    var payload = {files: files, text: text};
+    if(canFileShare && navigator.canShare(payload)){
+      navigator.share(payload).then(function(){
+        note.textContent = 'Thank you! Your order details and photos have been shared. We will reply soon.';
+      }).catch(function(e){
+        if(e && e.name === 'AbortError') return;
+        showSteps(text + '\n\n' + filesNote(files), files);
+      });
+      return;
+    }
+    // Computers that cannot share photos: open the chat and ask to attach
     showSteps(text + '\n\n' + filesNote(files), files);
   });
 })();
