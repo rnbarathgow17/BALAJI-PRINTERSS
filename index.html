@@ -279,6 +279,20 @@ form .cta{justify-self:start;border:0;cursor:pointer;font-family:inherit}
 @media (max-width:900px){.contact{grid-template-columns:1fr}}
 @media (max-width:520px){.row2{grid-template-columns:1fr}form .cta{justify-self:stretch;justify-content:center}}
 
+/* Founder + in-house roles */
+.founder{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding:32px;max-width:780px}
+.av.big{width:88px;height:88px;font-size:1.5rem;margin:0}
+.founder h3{font-size:1.4rem;font-variation-settings:'wght' 540}
+.founder .role{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--sky);margin-top:4px}
+.founder .fd{color:var(--sub);margin-top:12px;font-size:.98rem}
+.roles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.role{display:flex;gap:14px;align-items:flex-start;padding:22px}
+.role .dot{width:10px;height:10px;border-radius:50%;flex:none;margin-top:8px}
+.role h3{font-size:1.04rem;font-variation-settings:'wght' 540;line-height:1.35}
+.role p{font-size:.92rem;color:var(--sub);margin-top:4px}
+@media (max-width:1000px){.roles{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.roles{grid-template-columns:1fr}.founder{grid-template-columns:1fr;gap:18px;padding:26px}}
+
 footer{border-top:1px solid var(--line);padding:34px 0 40px;color:var(--sub);font-size:.88rem}
 footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
@@ -361,7 +375,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
         <div class="stat glass"><b>4</b><span>Manual printing machines</span></div>
         <div class="stat glass"><b>4</b><span>Printing tables</span></div>
         <div class="stat glass"><b>1</b><span>Curing machine</span></div>
-        <div class="stat glass"><b>3</b><span>Specialists: colour master, designer, M&amp;R operator</span></div>
+        <div class="stat glass"><b>100<small style="font-size:.45em">%</small></b><span>Done in-house, from artwork to delivery</span></div>
         <div class="stat glass"><b>45<small style="font-size:.45em"> km</small></b><span>Own delivery range</span></div>
       </div>
     </div>
@@ -435,15 +449,37 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <section class="sec" id="team">
     <div class="wrap">
       <div class="head reveal">
-        <div><p class="eyebrow">Our team</p><h2 class="h2">The people behind every print.</h2></div>
-        <p class="lead">A small, experienced team where each person owns their part of the job.</p>
+        <div><p class="eyebrow">Our founder</p><h2 class="h2">Led by experience.</h2></div>
+        <p class="lead">Every major order at Balaji Printerss is personally overseen by our founder.</p>
       </div>
-      <div class="team reveal">
-        <div class="person glass"><div class="av" style="background:#FF8EA1">SR</div><h3>S. Rajendran</h3><p class="role">Founder</p><p>Has run the unit for 19 years and personally oversees every major order.</p></div>
-        <div class="person glass"><div class="av" style="background:#C4B2F2">CM</div><h3>Colour Master</h3><p class="role">Colour</p><p>Mixes and matches every shade to meet buyer standards.</p></div>
-        <div class="person glass"><div class="av" style="background:#8ECFF2">DS</div><h3>Designer</h3><p class="role">Artwork</p><p>Prepares artwork, separations and print-ready files.</p></div>
-        <div class="person glass"><div class="av" style="background:#E2EBF5">MR</div><h3>M&amp;R Operator</h3><p class="role">Production</p><p>Sets up and runs our automatic machines for bulk orders.</p></div>
+      <div class="founder glass reveal">
+        <div class="av big" style="background:#FF8EA1">SR</div>
+        <div>
+          <h3>S. Rajendran</h3>
+          <p class="role">Founder</p>
+          <p class="fd">Founded Balaji Printerss in Tiruppur and has run the unit for 19 years, building long relationships with garment exporters and fashion brands.</p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <section class="sec" id="inhouse">
+    <div class="wrap">
+      <div class="head reveal">
+        <div><p class="eyebrow">In-house</p><h2 class="h2">Skilled hands at every stage.</h2></div>
+        <p class="lead">Every part of your order is handled by our own trained team, inside our own unit. Nothing is sent outside.</p>
+      </div>
+      <ul class="roles reveal">
+        <li class="role glass"><span class="dot" style="background:#FF8EA1"></span><div><h3>Artwork &amp; Design</h3><p>Designs, separations and print-ready files.</p></div></li>
+        <li class="role glass"><span class="dot" style="background:var(--lav)"></span><div><h3>Screen Exposing</h3><p>Coating, exposing and preparing every screen.</p></div></li>
+        <li class="role glass"><span class="dot" style="background:var(--sky)"></span><div><h3>Colour Matching</h3><p>Mixing shades to your reference and buyer approval.</p></div></li>
+        <li class="role glass"><span class="dot" style="background:#FF8EA1"></span><div><h3>M&amp;R Machine Operators</h3><p>Running our automatic machines for bulk orders.</p></div></li>
+        <li class="role glass"><span class="dot" style="background:var(--lav)"></span><div><h3>Table &amp; Manual Printers</h3><p>Samples, short runs and placement prints.</p></div></li>
+        <li class="role glass"><span class="dot" style="background:var(--sky)"></span><div><h3>Curing</h3><p>Heat curing so every print stays wash-fast.</p></div></li>
+        <li class="role glass"><span class="dot" style="background:#FF8EA1"></span><div><h3>Quality Checking</h3><p>Checking and counting pieces before dispatch.</p></div></li>
+        <li class="role glass"><span class="dot" style="background:var(--lav)"></span><div><h3>Accounts &amp; Billing</h3><p>Job records, challans and clear billing.</p></div></li>
+        <li class="role glass"><span class="dot" style="background:var(--sky)"></span><div><h3>Delivery</h3><p>Our own delivery within 45 km.</p></div></li>
+      </ul>
     </div>
   </section>
 
