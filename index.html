@@ -1,810 +1,705 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Balaji Printerss | Textile Screen Printing in Tiruppur</title>
+<title>Balaji Printerss — Textile Screen Printing, Tiruppur</title>
 <meta name="description" content="Balaji Printerss, Tiruppur: textile screen printing with 19 years of experience. Automatic M&R printing, manual table printing, curing, screen exposing, artwork design and delivery within 45 km.">
 <meta name="keywords" content="Balaji Printerss, screen printing Tiruppur, textile printing, garment printing, M&R printing, t-shirt printing, Tamil Nadu">
 <meta property="og:title" content="Balaji Printerss | Textile Screen Printing, Tiruppur">
-<meta property="og:description" content="19 years of textile screen printing for garment exporters and fashion brands.">
-<meta name="theme-color" content="#050816">
+<meta property="og:description" content="Automatic M&R printing, in-house screens, design and colour matching for garment exporters and fashion brands.">
+<meta name="theme-color" content="#f2f0ec">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Balaji Printerss","description":"Textile screen printing unit with automatic M&R machines, manual printing, curing, screen exposing and artwork design.","founder":"S. Rajendran","telephone":"+91 97875 70081","email":"balajiprinterss1@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Opposite Govt. School, Dharapuram Road, Pollikalipalayam","addressLocality":"Tiruppur","addressRegion":"Tamil Nadu","postalCode":"641665","addressCountry":"IN"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://d8j0ntlcm91z4.cloudfront.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#050816; --bg2:#0A1026;
-  --ink:#ffffff; --sub:#AAB3C9; --nav:#FBFDFF; --feat:#E2EBF5;
-  --sky:#8ECFF2; --lav:#C4B2F2; --cherry:#E3304F; --cherry-deep:#C8102E;
-  --line:rgba(196,214,232,.14); --hair:rgba(196,214,232,.55);
-  --chev:rgba(214,232,250,.9); --veil:5,8,22;
-  --blur:18px;
-  --ent-line:cubic-bezier(.16,1,.3,1); --ent-soft:cubic-bezier(.25,.8,.35,1); --rise:9px;
-  color-scheme:dark;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
+  --fg:#0d0c0b; --fg-soft:rgba(13,12,11,.64); --fg-faint:rgba(13,12,11,.42);
+  --shade:#f2f0ec; --rule:rgba(13,12,11,.16);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --pill-bg:#0a0908; --pill-fg:#ffffff;
+  --cherry:#C8102E; --lav:#B9A6EA; --sky:#86C5EA;
+  --side:clamp(16px,3.4vw,44px);
+  color-scheme:light;
 }
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 84px);background:var(--bg)}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 'Sora',system-ui,-apple-system,'Segoe UI',sans-serif;
-  font-variation-settings:'wght' 380;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:geometricPrecision}
-a{color:inherit;text-decoration:none}
-ul,ol{margin:0;padding:0;list-style:none}
-p{margin:0}
-h1,h2,h3{margin:0;font-weight:inherit}
-img{max-width:100%}
-a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #9fe0ff;outline-offset:3px;border-radius:6px}
-.wrap{width:min(1180px,100% - 3rem);margin-inline:auto}
-.w{font-variation-settings:'wght' var(--wg,400)}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:80px}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--shade);color:var(--fg);font-family:'Inter Tight','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
+a{color:inherit}
+p,h1,h2,h3,ul,ol{margin:0}
+ul,ol{padding:0;list-style:none}
+:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
 
-/* ---------- Header ---------- */
-.bar{position:fixed;top:0;left:0;right:0;z-index:40;padding-top:env(safe-area-inset-top,0px);transition:background .3s ease,border-color .3s ease;border-bottom:1px solid transparent}
-.bar.scrolled{background:rgba(5,8,22,.74);-webkit-backdrop-filter:blur(var(--blur)) saturate(.6);backdrop-filter:blur(var(--blur)) saturate(.6);border-bottom-color:var(--line)}
-.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:1.5rem;position:relative}
-.brand{display:flex;align-items:center;gap:.7rem}
-.brand svg{width:30px;height:30px;display:block;flex:none}
-.brand svg circle{mix-blend-mode:screen}
-#word{font-size:15.5px;letter-spacing:.2em;font-variation-settings:'wght' 560;white-space:nowrap}
-.navtoggle{position:absolute;top:0;right:0;width:1px;height:1px;opacity:0;margin:0;pointer-events:none}
-.burger,.scrim{display:none}
-.navpanel{display:flex;align-items:center;gap:2.2rem}
-.menu{display:flex;gap:2rem}
-.menu a,.login{font-size:14px;color:var(--nav);font-variation-settings:'wght' 506;opacity:.86;transition:opacity .2s}
-.menu a:hover,.login:hover{opacity:1}
-.login{display:inline-flex;align-items:center;gap:.5rem}
-.navarrow{width:11px;height:10px;fill:none;stroke:var(--nav);stroke-width:1.3}
-.pill{border:1.5px solid var(--hair);border-radius:999px;padding:.6rem 1.25rem;font-size:14px;color:#E8ECF0;font-variation-settings:'wght' 581;white-space:nowrap;transition:background .2s,border-color .2s}
-.pill:hover{background:rgba(255,255,255,.08);border-color:#fff}
+/* ---------- Preloader ---------- */
+.boot{position:fixed;inset:0;z-index:90;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:var(--shade);transition:opacity .7s var(--ease),visibility .7s}
+.boot.done{opacity:0;visibility:hidden}
+.boot p{font-size:12.5px;letter-spacing:.05em;color:var(--fg-faint)}
+.bar{width:150px;height:1px;background:var(--rule);overflow:hidden}
+.bar i{display:block;height:100%;width:100%;background:var(--fg);transform:scaleX(0);transform-origin:0 50%}
 
-@media (max-width:1099px){
-  .burger{display:inline-flex;align-items:center;justify-content:center;width:48px;height:36px;border-radius:999px;cursor:pointer;
-    border:1.5px solid var(--hair);background:rgba(255,255,255,.04);-webkit-backdrop-filter:blur(var(--blur));backdrop-filter:blur(var(--blur));position:relative}
-  .burger::after{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:max(48px,100%);height:max(48px,100%)}
-  .burger svg{width:20px;height:auto;fill:none;stroke:var(--nav);stroke-width:1.5;stroke-linecap:round;overflow:visible}
-  .burger svg path{transform-box:fill-box;transform-origin:center;transition:transform .24s ease,opacity .18s ease}
-  .navtoggle:focus-visible ~ .burger{outline:2px solid #9fe0ff;outline-offset:3px}
-  .navtoggle:checked ~ .burger .b1{transform:translateY(6px) rotate(45deg)}
-  .navtoggle:checked ~ .burger .b2{opacity:0}
-  .navtoggle:checked ~ .burger .b3{transform:translateY(-6px) rotate(-45deg)}
-  .scrim{position:fixed;inset:0;z-index:-1}
-  .navtoggle:checked ~ .scrim{display:block}
-  .navpanel{position:absolute;top:calc(100% + 6px);right:0;flex-direction:column;align-items:stretch;gap:2px;
-    width:min(300px,86vw);padding:14px;border-radius:22px;
-    background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.045)),
-      linear-gradient(90deg,rgba(227,48,79,.07),rgba(142,207,242,.07)),
-      linear-gradient(180deg,rgba(6,12,22,.72),rgba(6,12,22,.82));
-    -webkit-backdrop-filter:blur(26px) saturate(.5);backdrop-filter:blur(26px) saturate(.5);
-    border:1px solid var(--line);box-shadow:0 18px 44px rgba(2,6,14,.5);
-    opacity:0;transform:translateY(-8px) scale(.985);transform-origin:100% 0;pointer-events:none;visibility:hidden;
-    transition:opacity .2s ease,transform .2s ease,visibility .2s}
-  .navtoggle:checked ~ .navpanel{opacity:1;transform:none;pointer-events:auto;visibility:visible}
-  .menu{flex-direction:column;gap:0}
-  .menu a,.login{display:flex;align-items:center;min-height:48px;padding:0 14px;border-radius:13px;font-size:17px;opacity:1}
-  .menu a:hover,.login:hover{background:rgba(255,255,255,.07)}
-  .login .navarrow{margin-left:auto}
-  .pill{margin-top:8px;text-align:center;padding:14px 18px;font-size:16px}
-}
-@media (max-width:420px){#word{font-size:13px;letter-spacing:.14em}}
+/* ---------- Fixed background video ---------- */
+.stage{position:fixed;inset:0;z-index:0;overflow:hidden;background:var(--shade)}
+.stage video{position:absolute;top:50%;left:50%;width:100%;height:100%;transform:translate(-50%,-50%) scale(1.02);object-fit:cover;filter:contrast(1.02);will-change:transform;opacity:0;transition:opacity .8s var(--ease)}
+.stage.has-video video{opacity:1}
+.stage canvas{position:absolute;top:50%;left:50%;width:120vmax;height:120vmax;transform:translate(-50%,-50%);will-change:transform;transition:opacity .8s var(--ease)}
+.stage.has-video canvas{opacity:0}
+.veil{position:absolute;inset:0;pointer-events:none;background:
+  linear-gradient(to bottom,rgba(242,240,236,.62) 0%,rgba(242,240,236,.12) 22%,rgba(242,240,236,.12) 78%,rgba(242,240,236,.66) 100%),
+  radial-gradient(100% 80% at 50% 48%,rgba(242,240,236,0) 0%,rgba(242,240,236,.34) 100%),
+  rgba(242,240,236,.20)}
+.grain{position:absolute;inset:-50%;opacity:.13;mix-blend-mode:multiply;pointer-events:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/></filter><rect width='140' height='140' filter='url(%23n)' opacity='.5'/></svg>")}
 
-/* ---------- Hero: print-reveal ---------- */
-.hero{--cream:#F3EEFF;--muted:rgba(243,238,255,.74);--label:rgba(243,238,255,.5);--card:rgba(8,10,26,.6);
-  position:relative;width:100%;height:100vh;height:100svh;min-height:620px;overflow:hidden;background:var(--bg);color:var(--cream)}
-.art{position:absolute;inset:0;width:100%;height:100%;display:block}
-.art-base{z-index:1;transition:opacity 1s ease}
-.hero-video{z-index:0;object-fit:cover;object-position:center;opacity:0;transition:opacity 1.2s ease;pointer-events:none}
-.hero.has-video .hero-video{opacity:1}
-.hero.has-video .art-base{opacity:0!important}
-.art-reveal{z-index:2;pointer-events:none;
-  -webkit-mask-image:radial-gradient(circle 0px at -999px -999px,#fff,transparent);mask-image:radial-gradient(circle 0px at -999px -999px,#fff,transparent)}
-.hero-shade{position:absolute;inset:0;z-index:3;pointer-events:none;background:
-  linear-gradient(90deg,rgba(5,8,22,.92) 0%,rgba(5,8,22,.6) 34%,rgba(5,8,22,0) 60%),
-  linear-gradient(180deg,rgba(5,8,22,.55) 0%,rgba(5,8,22,0) 20%,rgba(5,8,22,0) 80%,var(--bg) 100%)}
-.hero-ui{position:absolute;inset:0;z-index:8;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr auto;padding:118px max(24px,calc((100% - 1180px)/2)) 104px;pointer-events:none}
-.art-window{display:none}
-.hero-left{grid-column:1;grid-row:1/-1;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;gap:28px;min-width:0}
-.hero-copy{max-width:560px;padding-right:56px;pointer-events:auto}
-.hero h1{font-family:'Orbitron','Arial Narrow',sans-serif;font-weight:500;font-variation-settings:normal;letter-spacing:.02em;
-  font-size:clamp(1.9rem,4.3vw,3.8rem);line-height:1.08;text-transform:uppercase;color:var(--cream);text-shadow:0 2px 28px rgba(0,0,0,.3)}
-.hero h1 .pull-line{display:block}
-.hero h1 .pull-line:first-child{color:#FF8EA1;font-size:.52em;letter-spacing:.14em;margin-bottom:.45em}
-.hero-copy p{margin-top:20px;max-width:400px;font-size:14.5px;line-height:1.65;color:var(--muted)}
-.icon-row{display:flex;gap:18px;margin-top:26px}
-.icon-item{display:flex;flex-direction:column;align-items:center;gap:7px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--label);transition:color .25s}
-.icon-btn{width:44px;height:44px;border-radius:50%;border:1px solid rgba(243,238,255,.5);display:grid;place-items:center;color:var(--cream);background:transparent;transition:background .25s ease,border-color .25s ease}
-.icon-item:hover{color:var(--cream)}
-.icon-item:hover .icon-btn{background:rgba(243,238,255,.1);border-color:var(--cream)}
-.icon-btn svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
-.product-card{pointer-events:auto;width:min(340px,100%);display:grid;grid-template-columns:86px 1fr;grid-template-rows:auto auto;gap:10px 14px;padding:12px;border-radius:18px;
-  background:var(--card);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border:1px solid rgba(243,238,255,.09);box-shadow:0 18px 50px rgba(0,0,0,.3)}
-.product-thumb{grid-column:1;grid-row:1/-1;width:86px;height:100%;min-height:86px;border-radius:12px;display:block;background:#050816}
-.product-body{grid-column:2;grid-row:1}
-.product-body h2{font-family:'Orbitron','Arial Narrow',sans-serif;font-weight:500;font-variation-settings:normal;font-size:11px;line-height:1.3;letter-spacing:.05em;text-transform:uppercase;color:var(--cream)}
-.product-body p{margin-top:6px;font-size:11.5px;line-height:1.5;color:var(--muted)}
-.cart-btn{grid-column:2;grid-row:2;justify-self:start;align-self:end;border:1px solid var(--cream);border-radius:999px;padding:7px 16px;font-size:12px;font-variation-settings:'wght' 500;color:var(--cream);background:transparent;transition:border-color .2s ease,color .2s ease,transform .2s ease,background .2s ease}
-.cart-btn:hover{transform:translateY(-1px);background:rgba(243,238,255,.08)}
-.hero-page{position:absolute;top:118px;right:max(24px,calc((100% - 1180px)/2));display:flex;align-items:center;gap:9px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(243,238,255,.72);pointer-events:none}
-.hero-page i{width:6px;height:6px;border-radius:50%;background:#FF8EA1;box-shadow:0 0 10px #FF8EA1}
-.specs{grid-column:2;grid-row:3;justify-self:end;pointer-events:auto;width:min(340px,100%);padding:16px 18px 10px;border-radius:16px;
-  background:var(--card);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border:1px solid rgba(243,238,255,.09)}
-.specs h3{font-family:'Orbitron','Arial Narrow',sans-serif;font-weight:500;font-variation-settings:normal;font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px;color:var(--cream)}
-.spec-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:8px 0}
-.spec-row + .spec-row{border-top:1px solid rgba(243,238,255,.12)}
-.spec-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--label)}
-.spec-value{font-size:12.5px;color:var(--cream);text-align:right;white-space:nowrap;font-variation-settings:'wght' 460}
+/* ---------- Chrome, footer bar, meter ---------- */
+.chrome{position:fixed;left:0;right:0;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:max(14px,calc(env(safe-area-inset-top,0px) + 12px)) var(--side) 14px;
+  background:linear-gradient(to bottom,rgba(242,240,236,.94) 0%,rgba(242,240,236,.78) 72%,rgba(242,240,236,0) 100%)}
+.mark{display:flex;align-items:center;gap:9px;font-size:15px;letter-spacing:-.012em;color:var(--fg);min-width:0;flex-shrink:1;text-decoration:none;font-weight:500}
+.mark-star{position:relative;width:20px;height:16px;flex:none;opacity:.9}
+.mark-star i{position:absolute;width:11px;height:11px;border-radius:50%;mix-blend-mode:multiply}
+.mark-star i:nth-child(1){left:0;top:0;background:var(--cherry)}
+.mark-star i:nth-child(2){left:8px;top:0;background:var(--lav)}
+.mark-star i:nth-child(3){left:4px;top:5px;background:var(--sky)}
+.nav{display:flex;align-items:center;gap:clamp(14px,2.4vw,32px);flex-shrink:0}
+.nav a:not(.pill){color:var(--fg);text-decoration:none;font-size:14.5px;letter-spacing:-.008em;opacity:.88;transition:opacity .3s var(--ease)}
+.nav a:not(.pill):hover{opacity:1}
+.pill{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 21px;border-radius:999px;background:var(--pill-bg);color:var(--pill-fg);
+  font-size:14.5px;font-weight:500;letter-spacing:-.008em;text-decoration:none;white-space:nowrap;opacity:1;border:1px solid rgba(10,9,8,.12);
+  box-shadow:0 1px 0 rgba(255,255,255,.10) inset;-webkit-text-fill-color:var(--pill-fg);cursor:pointer;font-family:inherit;
+  transition:transform .4s var(--ease),background .3s var(--ease),color .3s var(--ease)}
+.nav .pill{color:#fff;-webkit-text-fill-color:#fff}
+.pill:hover,.pill:focus-visible{transform:translateY(-2px);background:#000;color:#fff;-webkit-text-fill-color:#fff}
+.pill:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.foot{position:fixed;bottom:0;left:0;right:0;z-index:25;display:flex;justify-content:center;
+  padding:14px clamp(16px,4vw,24px) max(16px,calc(env(safe-area-inset-bottom,0px) + 12px));
+  font-size:12px;line-height:1.45;letter-spacing:.02em;color:var(--fg-faint);text-align:center;pointer-events:none;
+  background:linear-gradient(to top,rgba(242,240,236,.92) 0%,rgba(242,240,236,.72) 72%,rgba(242,240,236,0) 100%)}
+.meter{position:fixed;top:0;left:0;z-index:50;height:2px;width:100%;transform:scaleX(0);transform-origin:0 50%;
+  background:linear-gradient(90deg,var(--cherry),var(--lav),var(--sky));opacity:.8}
 
-/* Hero animations */
-@keyframes heroImageIn{from{opacity:0;transform:scale(1.18)}to{opacity:1;transform:scale(1)}}
-@keyframes wordPullUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(14px);filter:blur(8px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
-.hero-image-animate{opacity:0;animation:heroImageIn 1.2s cubic-bezier(.25,.46,.45,.94) .15s forwards}
-.pull-word{display:inline-block;opacity:0;transform:translateY(20px)}
-.pull-word:not(:last-child){margin-right:.3em}
-.words-visible .pull-word{animation:wordPullUp .55s ease forwards}
-html.js .fade-up-reveal{opacity:0;transform:translateY(14px);filter:blur(8px)}
-html.js .fade-up-reveal.is-visible{animation:fadeUp .7s ease forwards}
-@media (prefers-reduced-motion:no-preference){
-  html.js .reveal{opacity:0;translate:0 18px;transition:opacity .8s var(--ent-soft),translate .8s var(--ent-line)}
-  html.js .reveal.in{opacity:1;translate:0 0}
-}
-@media (prefers-reduced-motion:reduce){
-  .hero-image-animate,.pull-word,html.js .fade-up-reveal,.words-visible .pull-word,html.js .fade-up-reveal.is-visible{animation:none!important;opacity:1!important;transform:none!important;filter:none!important}
-}
+/* ---------- Scroll panels ---------- */
+.panels{position:fixed;inset:0;z-index:20;pointer-events:none}
+.panel{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  padding:max(104px,calc(env(safe-area-inset-top,0px) + 88px)) clamp(20px,5vw,60px) max(96px,calc(env(safe-area-inset-bottom,0px) + 80px));
+  opacity:0;will-change:opacity,transform}
+.eyebrow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px 12px;font-size:12.5px;letter-spacing:.045em;color:var(--fg-soft);
+  margin-bottom:clamp(16px,2vw,22px);max-width:min(46ch,100%);text-align:center}
+h1{font-weight:400;font-size:clamp(34px,7.1vw,104px);line-height:.98;letter-spacing:-.036em;max-width:15ch;text-wrap:balance}
+.sub{margin-top:clamp(18px,2.2vw,28px);font-size:clamp(15px,1.28vw,19px);line-height:1.5;letter-spacing:-.008em;color:var(--fg-soft);max-width:min(46ch,100%);text-wrap:pretty}
+.cta{margin-top:clamp(28px,3.4vw,44px);pointer-events:auto;width:100%;display:flex;justify-content:center}
+.cta .pill{height:48px;padding:0 27px;font-size:15px;max-width:min(100%,320px)}
 
-/* Hero responsive */
-@media (max-width:1024px){.hero-ui{padding:112px 28px 100px}.hero-page{top:112px;right:28px}.specs{width:min(300px,100%)}}
-@media (max-width:900px){.hero h1{font-size:clamp(1.6rem,6vw,2.8rem)}.specs{width:min(280px,100%)}}
-@media (max-width:768px){
-  .hero{height:auto;min-height:100vh;min-height:100svh}
-  .hero-ui{position:relative;inset:auto;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-start;gap:26px;
-    padding:max(104px,calc(env(safe-area-inset-top) + 96px)) max(20px,env(safe-area-inset-right)) 32px max(20px,env(safe-area-inset-left))}
-  .hero-page{position:static;order:-1;margin-bottom:-6px}
-  .hero-left{width:100%;justify-content:flex-start;gap:24px}
-  .art-window{display:block;width:100%;height:230px;margin:-6px 0}
-  .hero-copy{max-width:100%;padding-right:0}
-  .hero-copy p{max-width:100%}
-  .product-card{width:100%}
-  .specs{width:100%;margin-top:auto}
-  .spec-value{white-space:normal}
-  .hero-shade{background:linear-gradient(180deg,rgba(5,8,22,.6) 0%,rgba(5,8,22,.25) 50%,rgba(5,8,22,.75) 78%,var(--bg) 100%)}
-}
-@media (max-width:480px){
-  .hero-ui{gap:22px}
-  .hero h1{font-size:clamp(1.4rem,8.2vw,2rem)}
-  .hero-copy p{font-size:13.5px;margin-top:14px}
-  .icon-row{gap:16px;margin-top:18px}
-  .product-card{grid-template-columns:72px 1fr;gap:8px 12px;padding:10px;border-radius:14px}
-  .product-thumb{width:72px;min-height:72px;border-radius:10px}
-  .product-body h2{font-size:10px}.product-body p{font-size:11px}
-  .cart-btn{padding:6px 14px;font-size:11px}
-  .specs h3{font-size:10px}
-  .spec-row{padding:7px 0;gap:10px}
-  .spec-label,.spec-value{font-size:11px}
-}
-@media (max-width:360px){.hero h1{font-size:1.25rem}.product-card{grid-template-columns:64px 1fr}.product-thumb{width:64px;min-height:64px}}
+/* ---------- Scroll track ---------- */
+.track{position:relative;z-index:1;height:460vh;min-height:2800px}
 
-/* ---------- Sections ---------- */
-.sec{padding:clamp(80px,11vw,130px) 0;position:relative}
-.sec + .sec{border-top:1px solid var(--line)}
-.eyebrow{font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--sky);font-variation-settings:'wght' 520;margin-bottom:18px}
-.h2{font-size:clamp(1.9rem,4vw,3rem);line-height:1.12;letter-spacing:-.015em;font-variation-settings:'wght' 430;text-wrap:balance}
-.lead{color:var(--sub);font-size:clamp(1rem,1.4vw,1.12rem);max-width:38rem;margin-top:18px}
-.head{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem 4rem;align-items:end;margin-bottom:56px}
-.head .lead{margin-top:0}
-@media (max-width:860px){.head{grid-template-columns:1fr}}
-.glass{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:22px;
-  -webkit-backdrop-filter:blur(var(--blur));backdrop-filter:blur(var(--blur))}
+/* ---------- Content (scrolls up over the stage) ---------- */
+.content{position:relative;z-index:30;background:var(--shade);box-shadow:0 -40px 60px rgba(242,240,236,.9)}
+.content section{padding:clamp(80px,10vw,140px) 0;border-top:1px solid var(--rule)}
+.content section:first-child{border-top:0}
+.wrap{width:min(1180px,100% - 2*var(--side));margin-inline:auto}
+.kick{display:flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:.045em;color:var(--fg-soft);margin-bottom:22px}
+.kick::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--cherry);flex:none}
+h2{font-weight:400;font-size:clamp(32px,5vw,68px);line-height:1;letter-spacing:-.034em;max-width:16ch;text-wrap:balance}
+h3{font-weight:500;font-size:18px;letter-spacing:-.014em;line-height:1.3}
+.lede{font-size:clamp(15px,1.28vw,19px);line-height:1.55;letter-spacing:-.008em;color:var(--fg-soft);max-width:46ch;text-wrap:pretty}
+.head{display:grid;grid-template-columns:1.2fr .8fr;gap:24px 64px;align-items:end;margin-bottom:clamp(40px,5vw,72px)}
+.muted{color:var(--fg-soft)}
 
-/* About + stats */
-.about{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.about p + p{margin-top:16px}
-.about .lead{max-width:none}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.stat{padding:22px 20px}
-.stat b{display:block;font-size:clamp(2rem,3.6vw,2.8rem);line-height:1;font-variation-settings:'wght' 380;letter-spacing:-.03em;font-weight:inherit}
-.stat:nth-child(3n+1) b{color:#FF8EA1}.stat:nth-child(3n+2) b{color:var(--lav)}.stat:nth-child(3n) b{color:var(--sky)}
-.stat span{display:block;margin-top:10px;font-size:13.5px;color:var(--sub);line-height:1.4}
-@media (max-width:900px){.about{grid-template-columns:1fr;gap:2.5rem}}
-@media (max-width:480px){.stats{grid-template-columns:repeat(2,1fr)}}
+/* about */
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:24px 64px;align-items:end}
+.about .lede + .lede{margin-top:16px}
+.nums{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--fg);margin-top:clamp(48px,6vw,80px)}
+.num{padding:22px 16px 0 0}
+.num b{display:block;font-weight:400;font-size:clamp(40px,5vw,72px);line-height:1;letter-spacing:-.045em}
+.num span{display:block;margin-top:10px;font-size:13.5px;line-height:1.4;color:var(--fg-soft)}
 
-/* Services */
-.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.svc{padding:28px 24px 30px;position:relative;overflow:hidden;transition:border-color .3s,translate .3s}
-.svc::before{content:'';position:absolute;left:24px;right:24px;top:0;height:1.5px;background:linear-gradient(90deg,var(--cherry),var(--lav),var(--sky));opacity:.7}
-.svc:hover{border-color:rgba(196,214,232,.32);translate:0 -3px}
-.svc .num{font-size:12px;letter-spacing:.2em;color:var(--sub);font-variation-settings:'wght' 500}
-.svc h3{font-size:1.15rem;line-height:1.3;margin:18px 0 10px;font-variation-settings:'wght' 520}
-.svc p{font-size:.95rem;color:var(--sub);line-height:1.6}
-@media (max-width:1000px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:560px){.svc-grid{grid-template-columns:1fr}}
+/* services */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);column-gap:32px}
+.item{padding:24px 0 34px;border-top:1px solid var(--rule);position:relative}
+.item::before{content:'';position:absolute;left:0;top:-1px;width:36px;height:2px;background:var(--cherry)}
+.item:nth-child(3n+2)::before{background:var(--lav)}
+.item:nth-child(3n)::before{background:var(--sky)}
+.item .no{display:block;font-size:12.5px;letter-spacing:.06em;color:var(--fg-faint);margin-bottom:18px}
+.item p{margin-top:8px;font-size:15px;line-height:1.55;color:var(--fg-soft)}
 
-/* Unit */
-.unit{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.mc{padding:30px 26px;min-height:260px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
-.mc .n{font-size:clamp(4rem,7vw,5.6rem);line-height:.9;letter-spacing:-.05em;font-variation-settings:'wght' 260}
-.mc:nth-child(1) .n{color:#FF8EA1}.mc:nth-child(2) .n{color:var(--lav)}.mc:nth-child(3) .n{color:var(--sky)}.mc:nth-child(4) .n{color:#fff}
-.mc h3{font-size:1.15rem;margin-bottom:8px;font-variation-settings:'wght' 520}
-.mc p{font-size:.95rem;color:var(--sub)}
-.mc::after{content:'';position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;filter:blur(40px);opacity:.35}
-.mc:nth-child(1)::after{background:var(--cherry)}.mc:nth-child(2)::after{background:var(--lav)}.mc:nth-child(3)::after{background:var(--sky)}.mc:nth-child(4)::after{background:#fff;opacity:.12}
-@media (max-width:1000px){.unit{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:520px){.unit{grid-template-columns:1fr}.mc{min-height:200px}}
+/* unit */
+.unit{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--fg)}
+.mc{padding:28px 24px 36px 0;border-right:1px solid var(--rule);margin-right:24px}
+.mc:last-child{border-right:0;margin-right:0}
+.mc b{display:block;font-weight:400;font-size:clamp(72px,9vw,136px);line-height:.9;letter-spacing:-.06em}
+.mc h3{margin-top:22px}
+.mc p{margin-top:6px;font-size:15px;line-height:1.5;color:var(--fg-soft)}
 
-/* Process */
-.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:0;counter-reset:s}
-.steps li{counter-increment:s;padding:26px 18px 0 0;position:relative}
-.steps li::before{content:'';position:absolute;left:0;right:0;top:0;height:1px;background:var(--line)}
-.steps li::after{content:'';position:absolute;left:0;top:-4px;width:9px;height:9px;border-radius:50%;background:var(--sky);box-shadow:0 0 14px var(--sky)}
-.steps li:nth-child(even)::after{background:var(--lav);box-shadow:0 0 14px var(--lav)}
-.steps li:last-child::after{background:var(--cherry);box-shadow:0 0 14px var(--cherry)}
-.steps .k{display:block;font-size:12px;letter-spacing:.2em;color:var(--sub);margin-bottom:10px;font-variation-settings:'wght' 500}
-.steps .k::before{content:'0' counter(s)}
-.steps h3{font-size:1.08rem;margin-bottom:8px;font-variation-settings:'wght' 520}
-.steps p{font-size:.93rem;color:var(--sub)}
-@media (max-width:1000px){.steps{grid-template-columns:repeat(3,1fr);row-gap:40px}}
-@media (max-width:560px){.steps{grid-template-columns:1fr 1fr;column-gap:18px}}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(6,1fr);column-gap:24px;counter-reset:s}
+.steps li{counter-increment:s;padding-top:20px;border-top:1px solid var(--fg)}
+.steps li::before{content:'0' counter(s);display:block;font-size:12.5px;letter-spacing:.06em;color:var(--fg-faint);margin-bottom:16px}
+.steps p{margin-top:6px;font-size:14.5px;line-height:1.5;color:var(--fg-soft)}
 
-/* Brands */
-.trust{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
-.names{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:baseline}
-.names .nm{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.05;letter-spacing:-.03em;font-variation-settings:'wght' 300}
-.names .nm:nth-child(2){color:var(--lav)}
-.names .more{display:block;width:100%;margin-top:14px;color:var(--sub);font-size:1.05rem}
-.promise{padding:32px 30px}
-.promise h3{font-size:1.2rem;margin-bottom:12px;font-variation-settings:'wght' 540;display:flex;align-items:center;gap:10px}
-.promise h3 svg{width:22px;height:22px;flex:none;fill:none;stroke:var(--sky);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.promise p{color:var(--sub);font-size:.98rem}
-@media (max-width:900px){.trust{grid-template-columns:1fr}}
+/* in-house roles */
+.roles{display:grid;grid-template-columns:repeat(3,1fr);column-gap:40px}
+.roles li{display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--rule)}
+.roles li:nth-last-child(-n+3){border-bottom:1px solid var(--rule)}
+.roles .d{width:8px;height:8px;border-radius:50%;margin-top:8px;flex:none;background:var(--cherry)}
+.roles li:nth-child(3n+2) .d{background:var(--lav)}
+.roles li:nth-child(3n) .d{background:var(--sky)}
+.roles p{margin-top:4px;font-size:14.5px;color:var(--fg-soft);line-height:1.5}
 
-/* Team */
-.team{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.person{padding:26px 24px}
-.av{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:1.05rem;letter-spacing:.06em;font-variation-settings:'wght' 600;margin-bottom:22px;color:#0A1026}
-.person h3{font-size:1.12rem;font-variation-settings:'wght' 540}
-.person .role{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--sky);margin-top:4px}
-.person p{font-size:.94rem;color:var(--sub);margin-top:12px}
-@media (max-width:1000px){.team{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:520px){.team{grid-template-columns:1fr}}
+/* work + founder */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px 80px;align-items:start}
+.names{display:flex;flex-wrap:wrap;gap:4px 22px;margin-top:8px}
+.names span{font-size:clamp(44px,6vw,88px);line-height:1;letter-spacing:-.045em}
+.names span:nth-child(2){color:var(--fg-soft)}
+.promise{border-top:1px solid var(--fg);padding-top:24px}
+.promise p{margin-top:10px;font-size:16px;line-height:1.6;color:var(--fg-soft)}
+.founder{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;border-top:1px solid var(--fg);padding-top:28px;max-width:760px}
+.av{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;font-size:22px;letter-spacing:-.02em;background:var(--fg);color:#fff;position:relative}
+.av::after{content:'';position:absolute;right:2px;bottom:2px;width:16px;height:16px;border-radius:50%;background:var(--cherry);border:3px solid var(--shade)}
+.founder small{display:block;margin-top:4px;font-size:12.5px;letter-spacing:.06em;color:var(--fg-faint)}
+.founder p{margin-top:12px;font-size:16px;line-height:1.6;color:var(--fg-soft)}
 
-/* Delivery band */
-.band{position:relative;overflow:hidden;border-radius:28px;padding:clamp(36px,6vw,64px);display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap;
-  background:radial-gradient(60% 120% at 0% 0%,rgba(227,48,79,.55),transparent 60%),radial-gradient(60% 120% at 100% 100%,rgba(142,207,242,.35),transparent 60%),linear-gradient(120deg,#1A1238,#0E1A38);border:1px solid var(--line)}
-.band .h2{max-width:20ch}
-.band .cta{flex:none}
+/* band */
+.band{background:var(--fg);color:#fff;border-radius:28px;padding:clamp(40px,6vw,80px);display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.band h2{color:#fff;max-width:18ch}
+.band .pill{background:#fff;color:var(--fg);-webkit-text-fill-color:var(--fg);height:48px;padding:0 27px;font-size:15px}
+.band .pill:hover{background:#fff;color:var(--fg);-webkit-text-fill-color:var(--fg)}
 
-/* Contact */
-.contact{display:grid;grid-template-columns:.95fr 1.05fr;gap:3.5rem}
-.dl{display:grid;gap:12px;margin-top:34px}
-.dl a,.dl div{display:flex;gap:16px;align-items:flex-start;padding:18px 20px}
-.dl svg{width:22px;height:22px;flex:none;fill:none;stroke:var(--sky);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
-.dl small{display:block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--sub)}
-.dl b{display:block;font-weight:inherit;font-variation-settings:'wght' 500;font-size:1.02rem;word-break:break-word}
-.dl .map{display:inline-block;margin-top:6px;color:#FF8EA1;font-size:.92rem}
-form{padding:clamp(24px,4vw,36px);display:grid;gap:16px}
-form h3{font-size:1.3rem;font-variation-settings:'wght' 520}
-label{display:grid;gap:7px;font-size:.88rem;color:var(--sub);font-variation-settings:'wght' 480}
-input,select,textarea{font:inherit;font-size:16px;color:var(--ink);background:rgba(255,255,255,.04);border:1px solid rgba(196,214,232,.22);border-radius:14px;padding:13px 15px;width:100%}
-select option{background:#0A1026}
-textarea{min-height:110px;resize:vertical}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.err{color:#FF8EA1;font-size:.9rem;min-height:1.2em}
-form .cta{justify-self:start;border:0;cursor:pointer;font-family:inherit}
-.note{font-size:.85rem;color:var(--sub)}
-@media (max-width:900px){.contact{grid-template-columns:1fr}}
-@media (max-width:520px){.row2{grid-template-columns:1fr}form .cta{justify-self:stretch;justify-content:center}}
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px 80px}
+.dl{margin-top:36px;border-top:1px solid var(--fg)}
+.dl > *{display:block;padding:18px 0;border-bottom:1px solid var(--rule);text-decoration:none}
+.dl small{display:block;font-size:12.5px;letter-spacing:.06em;color:var(--fg-faint);margin-bottom:4px}
+.dl b{font-weight:500;font-size:18px;letter-spacing:-.012em}
+.dl .map{display:inline-block;margin-top:8px;font-size:14.5px;color:var(--cherry);text-underline-offset:3px}
+form{display:grid;gap:22px;align-content:start}
+label{display:grid;gap:6px;font-size:12.5px;letter-spacing:.06em;color:var(--fg-faint)}
+input,select,textarea{font:inherit;font-size:17px;letter-spacing:-.01em;color:var(--fg);background:transparent;border:0;border-bottom:1px solid var(--rule);border-radius:0;padding:10px 0;width:100%;transition:border-color .3s var(--ease)}
+input:focus,select:focus,textarea:focus{outline:0;border-bottom-color:var(--fg)}
+textarea{min-height:96px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:22px 28px}
+.err{font-size:14px;color:var(--cherry);min-height:1.2em}
+form .pill{justify-self:start;height:48px;padding:0 27px;font-size:15px}
+.note{font-size:13.5px;color:var(--fg-faint)}
 
-/* Founder + in-house roles */
-.founder{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding:32px;max-width:780px}
-.av.big{width:88px;height:88px;font-size:1.5rem;margin:0}
-.founder h3{font-size:1.4rem;font-variation-settings:'wght' 540}
-.founder .role{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--sky);margin-top:4px}
-.founder .fd{color:var(--sub);margin-top:12px;font-size:.98rem}
-.roles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.role{display:flex;gap:14px;align-items:flex-start;padding:22px}
-.role .dot{width:10px;height:10px;border-radius:50%;flex:none;margin-top:8px}
-.role h3{font-size:1.04rem;font-variation-settings:'wght' 540;line-height:1.35}
-.role p{font-size:.92rem;color:var(--sub);margin-top:4px}
-@media (max-width:1000px){.roles{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:560px){.roles{grid-template-columns:1fr}.founder{grid-template-columns:1fr;gap:18px;padding:26px}}
+.site-foot{border-top:1px solid var(--rule);padding:28px 0 36px;font-size:13px;color:var(--fg-faint)}
+.site-foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
-/* ---------- Site-wide: same look as the opening screen ---------- */
-body{background-color:var(--bg);background-image:linear-gradient(rgba(180,195,235,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(180,195,235,.035) 1px,transparent 1px);background-size:6px 6px}
-.h2,.band .h2{font-family:'Orbitron','Arial Narrow',sans-serif;font-weight:500;font-variation-settings:normal;text-transform:uppercase;letter-spacing:.02em;
-  font-size:clamp(1.45rem,3vw,2.35rem);line-height:1.15;color:#F3EEFF;text-wrap:balance}
-.eyebrow{display:flex;align-items:center;gap:9px;color:#FF8EA1;letter-spacing:.22em}
-.eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:#FF8EA1;box-shadow:0 0 10px #FF8EA1;flex:none}
-.glass{background:rgba(8,10,26,.6);border:1px solid rgba(243,238,255,.09);border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.25)}
-.svc h3,.mc h3,.steps h3,.role h3,.promise h3,.founder h3,form h3{font-family:'Orbitron','Arial Narrow',sans-serif;font-weight:500;font-variation-settings:normal;
-  text-transform:uppercase;letter-spacing:.04em;font-size:.92rem;line-height:1.4}
-.founder h3{font-size:1.15rem}
-.stat b,.mc .n,.names .nm{font-family:'Orbitron','Arial Narrow',sans-serif;font-weight:500;font-variation-settings:normal}
-.names .nm{font-size:clamp(1.8rem,4vw,3rem);text-transform:uppercase;letter-spacing:.02em}
-.svc .num,.steps .k{color:rgba(243,238,255,.5);letter-spacing:.14em}
-.stat span,.mc p,.svc p,.role p,.steps p{color:rgba(243,238,255,.68)}
-.dl small,.spec-label{color:rgba(243,238,255,.5)}
-
-footer{border-top:1px solid var(--line);padding:34px 0 40px;color:var(--sub);font-size:.88rem}
-footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-
-/* Quick contact */
-.wa-float{position:fixed;right:24px;bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:35;display:flex;align-items:center;gap:10px;padding:14px 20px;border-radius:999px;
-  background:#1FA855;color:#fff;font-size:15px;font-variation-settings:'wght' 560;box-shadow:0 10px 30px rgba(0,0,0,.4)}
-.wa-float svg{width:20px;height:20px;fill:#fff}
-.quickbar{position:fixed;left:0;right:0;bottom:0;z-index:35;display:none;grid-template-columns:repeat(3,1fr);gap:8px;
-  padding:10px 10px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(5,8,22,.86);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-top:1px solid var(--line)}
-.quickbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:56px;border-radius:14px;font-size:14px;font-variation-settings:'wght' 560;color:#fff}
-.quickbar svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.quickbar .call{background:var(--cherry-deep)}.quickbar .wa{background:#1FA855}.quickbar .q{background:rgba(196,178,242,.22);border:1px solid rgba(196,178,242,.5)}
+/* quick contact */
+.wa-float{position:fixed;right:24px;bottom:calc(64px + env(safe-area-inset-bottom,0px));z-index:45;display:flex;align-items:center;gap:9px;height:48px;padding:0 20px;border-radius:999px;
+  background:#1FA855;color:#fff;font-size:15px;font-weight:500;text-decoration:none;box-shadow:0 10px 30px rgba(13,12,11,.18)}
+.wa-float svg{width:19px;height:19px;fill:#fff}
+.quickbar{position:fixed;left:0;right:0;bottom:0;z-index:45;display:none;grid-template-columns:repeat(3,1fr);gap:8px;
+  padding:10px 10px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(242,240,236,.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--rule)}
+.quickbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:54px;border-radius:14px;font-size:14px;font-weight:500;text-decoration:none}
+.quickbar svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.quickbar .call{background:var(--fg);color:#fff}
+.quickbar .wa{background:#1FA855;color:#fff}
 .quickbar .wa svg{fill:#fff;stroke:none}
-@media (max-width:860px){.wa-float{display:none}.quickbar{display:grid}body{padding-bottom:84px}}
+.quickbar .q{border:1px solid var(--fg);color:var(--fg)}
 
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+/* reveal for content */
+@media (prefers-reduced-motion:no-preference){
+  html.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  html.js .rv.in{opacity:1;transform:none}
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1000px){
+  .grid4{grid-template-columns:repeat(2,1fr)}
+  .unit{grid-template-columns:repeat(2,1fr)}
+  .mc:nth-child(2){border-right:0;margin-right:0}
+  .steps{grid-template-columns:repeat(3,1fr);row-gap:36px}
+  .roles{grid-template-columns:repeat(2,1fr)}
+  .roles li:nth-last-child(-n+3){border-bottom:0}
+  .roles li:nth-last-child(-n+2){border-bottom:1px solid var(--rule)}
+  .nums{grid-template-columns:repeat(3,1fr);row-gap:28px}
+}
+@media (max-width:900px){
+  .veil{background:
+    linear-gradient(to bottom,rgba(242,240,236,.72) 0%,rgba(242,240,236,.18) 24%,rgba(242,240,236,.18) 76%,rgba(242,240,236,.74) 100%),
+    radial-gradient(100% 80% at 50% 48%,rgba(242,240,236,0) 0%,rgba(242,240,236,.40) 100%),
+    rgba(242,240,236,.24)}
+  .head,.about,.split,.contact{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  .wa-float,.foot{display:none}
+  .quickbar{display:grid}
+  body{padding-bottom:78px}
+}
+@media (max-width:720px){
+  .nav a:not(.pill){display:none}
+  .mark{font-size:14px}
+  .nav .pill{height:38px;padding:0 16px;font-size:13.5px}
+  h1{max-width:12ch;font-size:clamp(30px,9.8vw,52px)}
+  .sub{font-size:15px;max-width:34ch}
+  .panel{padding:max(92px,calc(env(safe-area-inset-top,0px) + 76px)) 18px max(88px,calc(env(safe-area-inset-bottom,0px) + 72px))}
+  .foot{font-size:11px;max-width:34ch}
+  .row2{grid-template-columns:1fr}
+  form .pill{justify-self:stretch}
+}
+@media (max-width:560px){
+  .grid4,.unit,.roles{grid-template-columns:1fr}
+  .mc{border-right:0;margin-right:0;border-bottom:1px solid var(--rule)}
+  .mc:last-child{border-bottom:0}
+  .roles li:nth-last-child(-n+2){border-bottom:0}
+  .roles li:last-child{border-bottom:1px solid var(--rule)}
+  .steps{grid-template-columns:1fr 1fr;column-gap:18px}
+  .nums{grid-template-columns:repeat(2,1fr)}
+  .founder{grid-template-columns:1fr;gap:18px}
+}
+@media (max-width:420px){
+  .mark-star{display:none}
+  .nav .pill{height:36px;padding:0 14px;font-size:13px}
+  h1{max-width:11ch;font-size:clamp(28px,10.5vw,40px)}
+  .eyebrow{font-size:11px;letter-spacing:.04em;max-width:28ch}
+  .cta .pill{width:100%;max-width:280px;height:44px;padding:0 20px;font-size:14px}
+}
+@media (max-height:520px) and (orientation:landscape){
+  .panel{padding:max(72px,calc(env(safe-area-inset-top,0px) + 56px)) 24px max(64px,calc(env(safe-area-inset-bottom,0px) + 48px))}
+  h1{font-size:clamp(28px,8vh,44px)}
+  .sub{margin-top:12px;font-size:14px}
+  .cta{margin-top:16px}
+}
 </style>
 </head>
 <body>
 
-<header class="bar" id="bar">
-  <div class="wrap">
-    <a class="brand" href="#top" aria-label="Balaji Printerss home">
-      <svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="11" cy="11" r="8.5" fill="#E3304F"/><circle cx="19" cy="11" r="8.5" fill="#C4B2F2" opacity=".85"/><circle cx="15" cy="18.5" r="8.5" fill="#8ECFF2" opacity=".85"/></svg>
-      <span id="word">BALAJI PRINTERSS</span>
-    </a>
-    <input class="navtoggle" type="checkbox" id="nav-open" aria-label="Open menu">
-    <label class="scrim" for="nav-open" aria-hidden="true"></label>
-    <label class="burger" for="nav-open" aria-label="Menu">
-      <svg viewBox="0 0 22 14" aria-hidden="true"><path class="b1" d="M1 1 H21"/><path class="b2" d="M1 7 H21"/><path class="b3" d="M1 13 H21"/></svg>
-    </label>
-    <div class="navpanel">
-      <nav class="menu" aria-label="Main">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#unit">Our Unit</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="login wa-link" href="https://wa.me/919787570081?text=Hello%20Balaji%20Printerss%2C%20I%20have%20a%20printing%20enquiry." target="_blank" rel="noopener">WhatsApp us
-        <svg class="navarrow" viewBox="0 0 10 9" aria-hidden="true"><path d="M0 4.5 H9.1 M5.4 0.9 L9.2 4.5 L5.4 8.1"/></svg></a>
-      <a class="pill" href="#contact">Get a quote</a>
-    </div>
-  </div>
+<div class="boot" id="boot">
+  <div class="bar"><i id="bootBar"></i></div>
+  <p id="bootPct">LOADING 0%</p>
+</div>
+
+<div class="stage" id="stage">
+  <canvas id="art" aria-hidden="true"></canvas>
+  <video id="clip" muted playsinline preload="auto" disablepictureinpicture></video>
+  <div class="veil"></div>
+  <div class="grain"></div>
+</div>
+
+<i class="meter" id="meter"></i>
+
+<header class="chrome">
+  <a class="mark" href="#top"><span class="mark-star" aria-hidden="true"><i></i><i></i><i></i></span>&nbsp;Balaji Printerss</a>
+  <nav class="nav" aria-label="Main">
+    <a href="#services">Services</a>
+    <a href="#unit">Our Unit</a>
+    <a href="#contact">Contact</a>
+    <a class="pill" href="#contact">Get a quote</a>
+  </nav>
 </header>
 
-<main id="top">
-  <section class="hero" aria-labelledby="hero-title">
-    <video class="art hero-video" id="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
-      <source src="background.mp4" type="video/mp4">
-      <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260506_031045_0e1165dd-ab48-46e3-ad3d-5fe77f217647.mp4" type="video/mp4">
-    </video>
-    <canvas class="art art-base hero-image-animate" id="art-base" aria-hidden="true"></canvas>
-    <canvas class="art art-reveal hero-image-animate" id="art-reveal" aria-hidden="true"></canvas>
-    <div class="hero-shade" aria-hidden="true"></div>
-    <div class="hero-ui">
-      <div class="hero-left">
-        <div class="hero-copy">
-          <h1 class="words-pull-up" id="hero-title"><span>Balaji Printerss //</span><span>Textile Screen</span><span>Printing</span></h1>
-          <p class="fade-up-reveal" data-delay="0.5">Automatic M&amp;R printing with in-house screens, artwork and colour matching, for garment exporters and fashion brands in Tiruppur.</p>
-          <div class="icon-row fade-up-reveal" data-delay="0.65">
-            <a class="icon-item" href="tel:+919787570081" aria-label="Call Balaji Printerss"><span class="icon-btn"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.4 1.8h2.4l1.2 3-1.5.9a6.6 6.6 0 003 3l.9-1.5 3 1.2v2.4a1.2 1.2 0 01-1.2 1.2A10.2 10.2 0 012.2 3a1.2 1.2 0 011.2-1.2z"/></svg></span>Call</a>
-            <a class="icon-item" href="https://wa.me/919787570081?text=Hello%20Balaji%20Printerss%2C%20I%20have%20a%20printing%20enquiry." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><span class="icon-btn"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.6a6.4 6.4 0 00-5.5 9.7L1.6 14.4l3.2-.8A6.4 6.4 0 108 1.6z"/><path d="M5.9 5.2c.2-.3.6-.3.8 0l.5 1.1-.6.7a4 4 0 002.4 2.4l.7-.6 1.1.5c.3.2.3.6 0 .8-.4.4-1 .6-1.6.4A5.6 5.6 0 015.5 6.8c-.2-.6 0-1.2.4-1.6z"/></svg></span>WhatsApp</a>
-            <a class="icon-item" href="https://www.google.com/maps/search/?api=1&amp;query=Balaji+Printerss+Pollikalipalayam+Tiruppur" target="_blank" rel="noopener" aria-label="Directions to our unit"><span class="icon-btn"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14.4s-4.6-4-4.6-7.3a4.6 4.6 0 019.2 0c0 3.3-4.6 7.3-4.6 7.3z"/><circle cx="8" cy="7" r="1.6"/></svg></span>Directions</a>
-          </div>
+<main class="panels" id="top">
+  <section class="panel" data-panel>
+    <p class="eyebrow">Textile screen printing <span>&middot;</span> Pollikalipalayam, Tiruppur</p>
+    <h1>Printed right.<br>Delivered on time.</h1>
+    <p class="sub">Automatic M&amp;R printing, in-house screens, artwork and colour matching for garment exporters and fashion brands.</p>
+    <div class="cta"><a class="pill" href="#contact">Get a quote</a></div>
+  </section>
+  <section class="panel" data-panel>
+    <p class="eyebrow">On our floor</p>
+    <h1>Every colour, in its place.</h1>
+    <p class="sub">Two M&amp;R automatic machines, four manual machines and four tables, so every order gets the right setup.</p>
+    <div class="cta"><a class="pill" href="#unit">See our unit</a></div>
+  </section>
+  <section class="panel" data-panel>
+    <p class="eyebrow">From artwork to delivery</p>
+    <h1>One unit.<br>Every step.</h1>
+    <p class="sub">Screens, colour matching, printing, curing and delivery within 45 km, all handled by our own team.</p>
+    <div class="cta"><a class="pill" href="#contact">Send your requirement</a></div>
+  </section>
+</main>
+
+<footer class="foot" id="footbar">Opposite Govt. School, Dharapuram Road, Tiruppur &nbsp;&middot;&nbsp; +91 97875 70081</footer>
+
+<div class="track"></div>
+
+<div class="content">
+  <section id="about">
+    <div class="wrap">
+      <div class="about rv">
+        <div>
+          <p class="kick">About us</p>
+          <h2>Every step of your print, in one unit.</h2>
         </div>
-        <div class="art-window" id="art-window" aria-hidden="true"></div>
-        <article class="product-card">
-          <canvas class="product-thumb" id="thumb" aria-hidden="true"></canvas>
-          <div class="product-body">
-            <h2 class="words-pull-up">M&amp;R Automatic Printing</h2>
-            <p class="fade-up-reveal" data-delay="1.05">Bulk orders printed with sharp, consistent registration from the first piece to the last.</p>
-          </div>
-          <a class="cart-btn fade-up-reveal" data-delay="1.15" href="#contact">Get a Quote</a>
-        </article>
+        <div>
+          <p class="lede">Balaji Printerss was founded by S. Rajendran in Tiruppur and has been printing garments for exporters and well-known fashion labels for 19 years.</p>
+          <p class="lede">Artwork, screens, colour mixing, printing, curing and delivery all happen in our own unit, by our own team.</p>
+        </div>
       </div>
-      <p class="hero-page fade-up-reveal" data-delay="0.75" aria-hidden="true"><i></i><span id="hint">Move to reveal the print</span></p>
-      <div class="specs">
-        <h3 class="words-pull-up">Unit Specs</h3>
-        <div class="spec-row fade-up-reveal" data-delay="1.2"><span class="spec-label">Automatic</span><span class="spec-value">2 M&amp;R Machines</span></div>
-        <div class="spec-row fade-up-reveal" data-delay="1.3"><span class="spec-label">Manual</span><span class="spec-value">4 Machines · 4 Tables</span></div>
-        <div class="spec-row fade-up-reveal" data-delay="1.4"><span class="spec-label">Finishing</span><span class="spec-value">In-house Curing</span></div>
-        <div class="spec-row fade-up-reveal" data-delay="1.5"><span class="spec-label">Delivery</span><span class="spec-value">Within 45 km</span></div>
+      <div class="nums rv">
+        <div class="num"><b>2</b><span>M&amp;R automatic machines</span></div>
+        <div class="num"><b>4</b><span>Manual printing machines</span></div>
+        <div class="num"><b>4</b><span>Printing tables</span></div>
+        <div class="num"><b>1</b><span>Curing machine</span></div>
+        <div class="num"><b>100%</b><span>Done in-house, artwork to delivery</span></div>
+        <div class="num"><b>45<small style="font-size:.4em"> km</small></b><span>Own delivery range</span></div>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="about">
-    <div class="wrap about">
-      <div class="reveal">
-        <p class="eyebrow">About us</p>
-        <h2 class="h2">Every step of your print, in one unit.</h2>
-        <p class="lead">Balaji Printerss was founded by S. Rajendran in Tiruppur and has been printing garments for exporters and well-known fashion labels for 19 years.</p>
-        <p class="lead">Artwork, screens, colour mixing, printing, curing and delivery all happen in our own unit, by our own team. When you give us an order, you deal with one place from start to finish.</p>
-      </div>
-      <div class="stats reveal">
-        <div class="stat glass"><b>2</b><span>M&amp;R automatic machines</span></div>
-        <div class="stat glass"><b>4</b><span>Manual printing machines</span></div>
-        <div class="stat glass"><b>4</b><span>Printing tables</span></div>
-        <div class="stat glass"><b>1</b><span>Curing machine</span></div>
-        <div class="stat glass"><b>100<small style="font-size:.45em">%</small></b><span>Done in-house, from artwork to delivery</span></div>
-        <div class="stat glass"><b>45<small style="font-size:.45em"> km</small></b><span>Own delivery range</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec" id="services">
+  <section id="services">
     <div class="wrap">
-      <div class="head reveal">
-        <div><p class="eyebrow">Services</p><h2 class="h2">Everything your print job needs, under one roof.</h2></div>
-        <p class="lead">You send the design and the garments. We take care of every step until the printed pieces reach your door.</p>
+      <div class="head rv">
+        <div><p class="kick">Services</p><h2>Everything your print job needs.</h2></div>
+        <p class="lede">You send the design and the garments. We take care of every step until the printed pieces reach your door.</p>
       </div>
-      <div class="svc-grid reveal">
-        <div class="svc glass"><span class="num">01</span><h3>Automatic printing</h3><p>Two M&amp;R automatic machines for bulk orders, with consistent registration from the first piece to the last.</p></div>
-        <div class="svc glass"><span class="num">02</span><h3>Manual &amp; table printing</h3><p>Four manual machines and four tables for samples, short runs and placement prints.</p></div>
-        <div class="svc glass"><span class="num">03</span><h3>Curing</h3><p>In-house curing so every print is fixed properly and stays wash-fast.</p></div>
-        <div class="svc glass"><span class="num">04</span><h3>Screen exposing</h3><p>We make and expose our own screens, keeping detail sharp and turnaround short.</p></div>
-        <div class="svc glass"><span class="num">05</span><h3>Design &amp; artwork</h3><p>Our designer prepares artwork, colour separations and print-ready files.</p></div>
-        <div class="svc glass"><span class="num">06</span><h3>Colour matching</h3><p>Our colour master mixes shades to match your reference or buyer approval.</p></div>
-        <div class="svc glass"><span class="num">07</span><h3>Accounts &amp; records</h3><p>Clear job records, challans and billing, so you always know where an order stands.</p></div>
-        <div class="svc glass"><span class="num">08</span><h3>Delivery</h3><p>Our own delivery of printed pieces anywhere within 45 km.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec" id="unit">
-    <div class="wrap">
-      <div class="head reveal">
-        <div><p class="eyebrow">Our unit</p><h2 class="h2">The right machine for every order size.</h2></div>
-        <p class="lead">From a small sample run to full bulk production, we choose the setup that gives your print the best finish.</p>
-      </div>
-      <div class="unit reveal">
-        <div class="mc glass"><span class="n">2</span><div><h3>M&amp;R automatic</h3><p>High-volume, multi-colour printing with precise registration.</p></div></div>
-        <div class="mc glass"><span class="n">4</span><div><h3>Manual machines</h3><p>Flexible setups for samples and speciality prints.</p></div></div>
-        <div class="mc glass"><span class="n">4</span><div><h3>Printing tables</h3><p>Table printing for panels and large placements.</p></div></div>
-        <div class="mc glass"><span class="n">1</span><div><h3>Curing machine</h3><p>Controlled heat curing for durable, wash-fast prints.</p></div></div>
+      <div class="grid4 rv">
+        <div class="item"><span class="no">01</span><h3>Automatic printing</h3><p>Two M&amp;R automatic machines for bulk orders, with consistent registration from the first piece to the last.</p></div>
+        <div class="item"><span class="no">02</span><h3>Manual &amp; table printing</h3><p>Four manual machines and four tables for samples, short runs and placement prints.</p></div>
+        <div class="item"><span class="no">03</span><h3>Curing</h3><p>In-house curing so every print is fixed properly and stays wash-fast.</p></div>
+        <div class="item"><span class="no">04</span><h3>Screen exposing</h3><p>We make and expose our own screens, keeping detail sharp and turnaround short.</p></div>
+        <div class="item"><span class="no">05</span><h3>Design &amp; artwork</h3><p>Artwork, colour separations and print-ready files prepared in-house.</p></div>
+        <div class="item"><span class="no">06</span><h3>Colour matching</h3><p>Shades mixed to match your reference or buyer approval.</p></div>
+        <div class="item"><span class="no">07</span><h3>Accounts &amp; records</h3><p>Clear job records, challans and billing, so you always know where an order stands.</p></div>
+        <div class="item"><span class="no">08</span><h3>Delivery</h3><p>Our own delivery of printed pieces anywhere within 45 km.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="process">
+  <section id="unit">
     <div class="wrap">
-      <div class="head reveal">
-        <div><p class="eyebrow">How we work</p><h2 class="h2">Six steps, one team.</h2></div>
-        <p class="lead">Every order follows the same careful path, so quality stays the same on every piece.</p>
+      <div class="head rv">
+        <div><p class="kick">Our unit</p><h2>The right machine for every order size.</h2></div>
+        <p class="lede">From a small sample run to full bulk production, we choose the setup that gives your print the best finish.</p>
       </div>
-      <ol class="steps reveal">
-        <li><span class="k"></span><h3>Artwork</h3><p>We receive your design or create one, then prepare separations.</p></li>
-        <li><span class="k"></span><h3>Screens</h3><p>Screens are coated and exposed in-house.</p></li>
-        <li><span class="k"></span><h3>Colour match</h3><p>Shades are mixed and approved against your reference.</p></li>
-        <li><span class="k"></span><h3>Sample</h3><p>A strike-off is printed for your approval.</p></li>
-        <li><span class="k"></span><h3>Production</h3><p>Bulk printing on M&amp;R or manual machines, then curing.</p></li>
-        <li><span class="k"></span><h3>Delivery</h3><p>Checked, counted and delivered within 45 km.</p></li>
+      <div class="unit rv">
+        <div class="mc"><b>2</b><h3>M&amp;R automatic</h3><p>High-volume, multi-colour printing with precise registration.</p></div>
+        <div class="mc"><b>4</b><h3>Manual machines</h3><p>Flexible setups for samples and speciality prints.</p></div>
+        <div class="mc"><b>4</b><h3>Printing tables</h3><p>Table printing for panels and large placements.</p></div>
+        <div class="mc"><b>1</b><h3>Curing machine</h3><p>Controlled heat curing for durable, wash-fast prints.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="head rv">
+        <div><p class="kick">How we work</p><h2>Six steps, one team.</h2></div>
+        <p class="lede">Every order follows the same careful path, so quality stays the same on every piece.</p>
+      </div>
+      <ol class="steps rv">
+        <li><h3>Artwork</h3><p>We receive your design or create one, then prepare separations.</p></li>
+        <li><h3>Screens</h3><p>Screens are coated and exposed in-house.</p></li>
+        <li><h3>Colour match</h3><p>Shades are mixed and approved against your reference.</p></li>
+        <li><h3>Sample</h3><p>A strike-off is printed for your approval.</p></li>
+        <li><h3>Production</h3><p>Bulk printing on M&amp;R or manual machines, then curing.</p></li>
+        <li><h3>Delivery</h3><p>Checked, counted and delivered within 45 km.</p></li>
       </ol>
     </div>
   </section>
 
-  <section class="sec" id="brands">
-    <div class="wrap trust">
-      <div class="reveal">
-        <p class="eyebrow">Our work</p>
-        <div class="names"><span class="nm">Disney</span><span class="nm">Crocodile</span>
-          <span class="more">and other leading Indian and international fashion labels.</span></div>
+  <section id="inhouse">
+    <div class="wrap">
+      <div class="head rv">
+        <div><p class="kick">In-house</p><h2>Skilled hands at every stage.</h2></div>
+        <p class="lede">Every part of your order is handled by our own trained team, inside our own unit. Nothing is sent outside.</p>
       </div>
-      <div class="promise glass reveal">
-        <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.9 7.8-7 9-4.1-1.2-7-4.8-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>Your designs stay confidential</h3>
+      <ul class="roles rv">
+        <li><span class="d"></span><div><h3>Artwork &amp; Design</h3><p>Designs, separations and print-ready files.</p></div></li>
+        <li><span class="d"></span><div><h3>Screen Exposing</h3><p>Coating, exposing and preparing every screen.</p></div></li>
+        <li><span class="d"></span><div><h3>Colour Matching</h3><p>Mixing shades to your reference and buyer approval.</p></div></li>
+        <li><span class="d"></span><div><h3>M&amp;R Machine Operators</h3><p>Running our automatic machines for bulk orders.</p></div></li>
+        <li><span class="d"></span><div><h3>Table &amp; Manual Printers</h3><p>Samples, short runs and placement prints.</p></div></li>
+        <li><span class="d"></span><div><h3>Curing</h3><p>Heat curing so every print stays wash-fast.</p></div></li>
+        <li><span class="d"></span><div><h3>Quality Checking</h3><p>Checking and counting pieces before dispatch.</p></div></li>
+        <li><span class="d"></span><div><h3>Accounts &amp; Billing</h3><p>Job records, challans and clear billing.</p></div></li>
+        <li><span class="d"></span><div><h3>Delivery</h3><p>Our own delivery within 45 km.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap split">
+      <div class="rv">
+        <p class="kick">Our work</p>
+        <div class="names"><span>Disney</span><span>Crocodile</span></div>
+        <p class="lede" style="margin-top:20px">and other leading Indian and international fashion labels.</p>
+      </div>
+      <div class="promise rv">
+        <h3>Your designs stay confidential</h3>
         <p>We never show or share a client's designs before they are released. That is why brands trust us with their upcoming collections, and why you won't find unreleased work on this website.</p>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="team">
+  <section id="team">
     <div class="wrap">
-      <div class="head reveal">
-        <div><p class="eyebrow">Our founder</p><h2 class="h2">Led by experience.</h2></div>
-        <p class="lead">Every major order at Balaji Printerss is personally overseen by our founder.</p>
+      <div class="head rv">
+        <div><p class="kick">Our founder</p><h2>Led by experience.</h2></div>
+        <p class="lede">Every major order at Balaji Printerss is personally overseen by our founder.</p>
       </div>
-      <div class="founder glass reveal">
-        <div class="av big" style="background:#FF8EA1">SR</div>
+      <div class="founder rv">
+        <div class="av">SR</div>
         <div>
-          <h3>S. Rajendran</h3>
-          <p class="role">Founder</p>
-          <p class="fd">Founded Balaji Printerss in Tiruppur and has run the unit for 19 years, building long relationships with garment exporters and fashion brands.</p>
+          <h3>S. Rajendran</h3><small>Founder</small>
+          <p>Founded Balaji Printerss in Tiruppur and has run the unit for 19 years, building long relationships with garment exporters and fashion brands.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="inhouse">
+  <section style="border-top:0;padding-top:0">
     <div class="wrap">
-      <div class="head reveal">
-        <div><p class="eyebrow">In-house</p><h2 class="h2">Skilled hands at every stage.</h2></div>
-        <p class="lead">Every part of your order is handled by our own trained team, inside our own unit. Nothing is sent outside.</p>
-      </div>
-      <ul class="roles reveal">
-        <li class="role glass"><span class="dot" style="background:#FF8EA1"></span><div><h3>Artwork &amp; Design</h3><p>Designs, separations and print-ready files.</p></div></li>
-        <li class="role glass"><span class="dot" style="background:var(--lav)"></span><div><h3>Screen Exposing</h3><p>Coating, exposing and preparing every screen.</p></div></li>
-        <li class="role glass"><span class="dot" style="background:var(--sky)"></span><div><h3>Colour Matching</h3><p>Mixing shades to your reference and buyer approval.</p></div></li>
-        <li class="role glass"><span class="dot" style="background:#FF8EA1"></span><div><h3>M&amp;R Machine Operators</h3><p>Running our automatic machines for bulk orders.</p></div></li>
-        <li class="role glass"><span class="dot" style="background:var(--lav)"></span><div><h3>Table &amp; Manual Printers</h3><p>Samples, short runs and placement prints.</p></div></li>
-        <li class="role glass"><span class="dot" style="background:var(--sky)"></span><div><h3>Curing</h3><p>Heat curing so every print stays wash-fast.</p></div></li>
-        <li class="role glass"><span class="dot" style="background:#FF8EA1"></span><div><h3>Quality Checking</h3><p>Checking and counting pieces before dispatch.</p></div></li>
-        <li class="role glass"><span class="dot" style="background:var(--lav)"></span><div><h3>Accounts &amp; Billing</h3><p>Job records, challans and clear billing.</p></div></li>
-        <li class="role glass"><span class="dot" style="background:var(--sky)"></span><div><h3>Delivery</h3><p>Our own delivery within 45 km.</p></div></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="sec" style="padding-top:0;border-top:0">
-    <div class="wrap">
-      <div class="band reveal">
-        <h2 class="h2">We deliver printed pieces anywhere within 45 km.</h2>
-        <a class="cta" href="#contact"><span>Plan your order</span><svg class="arrow" viewBox="0 0 16 11" aria-hidden="true"><path d="M0 5.5 H14.6 M10.3 1.2 L14.9 5.5 L10.3 9.8"/></svg></a>
+      <div class="band rv">
+        <h2>We deliver printed pieces anywhere within 45 km.</h2>
+        <a class="pill" href="#contact">Plan your order</a>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="contact">
+  <section id="contact">
     <div class="wrap contact">
-      <div class="reveal">
-        <p class="eyebrow">Contact</p>
-        <h2 class="h2">Tell us about your order.</h2>
-        <p class="lead">Share the quantity, number of colours and your deadline. We usually reply the same working day.</p>
+      <div class="rv">
+        <p class="kick">Contact</p>
+        <h2>Tell us about your order.</h2>
+        <p class="lede" style="margin-top:20px">Share the quantity, number of colours and your deadline. We usually reply the same working day.</p>
         <div class="dl">
-          <a class="glass" href="tel:+919787570081"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg><span><small>Phone / WhatsApp</small><b>+91 97875 70081</b></span></a>
-          <a class="glass" href="mailto:balajiprinterss1@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span><small>Email</small><b>balajiprinterss1@gmail.com</b></span></a>
-          <div class="glass"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span><small>Address</small><b>Opposite Govt. School, Dharapuram Road, Pollikalipalayam, Tiruppur, Tamil Nadu – 641665</b>
-            <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Balaji+Printerss+Pollikalipalayam+Tiruppur" target="_blank" rel="noopener">Get directions on Google Maps →</a></span></div>
+          <a href="tel:+919787570081"><small>Phone / WhatsApp</small><b>+91 97875 70081</b></a>
+          <a href="mailto:balajiprinterss1@gmail.com"><small>Email</small><b>balajiprinterss1@gmail.com</b></a>
+          <div><small>Address</small><b>Opposite Govt. School, Dharapuram Road, Pollikalipalayam, Tiruppur, Tamil Nadu – 641665</b><br>
+            <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Balaji+Printerss+Pollikalipalayam+Tiruppur" target="_blank" rel="noopener">Get directions on Google Maps →</a></div>
         </div>
       </div>
-      <form id="quote" class="glass reveal" novalidate>
-        <h3>Request a quote</h3>
+      <form id="quote" class="rv" novalidate>
         <div class="row2">
-          <label>Your name<input id="f-name" autocomplete="name"></label>
-          <label>Company<input id="f-co" autocomplete="organization"></label>
+          <label>YOUR NAME<input id="f-name" autocomplete="name"></label>
+          <label>COMPANY<input id="f-co" autocomplete="organization"></label>
         </div>
         <div class="row2">
-          <label>Quantity (pieces)<input id="f-qty" inputmode="numeric"></label>
-          <label>Number of colours<select id="f-col"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></label>
+          <label>QUANTITY (PIECES)<input id="f-qty" inputmode="numeric"></label>
+          <label>NUMBER OF COLOURS<select id="f-col"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></label>
         </div>
-        <label>Order details<textarea id="f-msg" placeholder="Garment type, print size, deadline"></textarea></label>
+        <label>ORDER DETAILS<textarea id="f-msg" placeholder="Garment type, print size, deadline"></textarea></label>
         <p class="err" id="f-err" role="alert"></p>
-        <button type="submit" class="cta"><span>Send on WhatsApp</span><svg class="arrow" viewBox="0 0 16 11" aria-hidden="true"><path d="M0 5.5 H14.6 M10.3 1.2 L14.9 5.5 L10.3 9.8"/></svg></button>
+        <button type="submit" class="pill">Send on WhatsApp</button>
         <p class="note">This opens WhatsApp with your details filled in.</p>
       </form>
     </div>
   </section>
-</main>
 
-<footer>
-  <div class="wrap">
-    <span>© <span id="yr"></span> Balaji Printerss, Tiruppur. Textile screen printing.</span>
-    <span>Brand names belong to their respective owners.</span>
-  </div>
-</footer>
+  <footer class="site-foot">
+    <div class="wrap">
+      <span>© <span id="yr"></span> Balaji Printerss, Tiruppur. Textile screen printing.</span>
+      <span>Brand names belong to their respective owners.</span>
+    </div>
+  </footer>
+</div>
 
-<a class="wa-float wa-link" href="https://wa.me/919787570081?text=Hello%20Balaji%20Printerss%2C%20I%20have%20a%20printing%20enquiry." target="_blank" rel="noopener" aria-label="Chat with Balaji Printerss on WhatsApp">
+<a class="wa-float" href="https://wa.me/919787570081?text=Hello%20Balaji%20Printerss%2C%20I%20have%20a%20printing%20enquiry." target="_blank" rel="noopener" aria-label="Chat with Balaji Printerss on WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3a.4.4 0 000-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.3 2.2 2.2 0 00.1-1.3c0-.1-.2-.2-.5-.3z"/></svg>
   Chat on WhatsApp</a>
 <nav class="quickbar" aria-label="Quick contact">
   <a class="call" href="tel:+919787570081"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>Call</a>
-  <a class="wa wa-link" href="https://wa.me/919787570081?text=Hello%20Balaji%20Printerss%2C%20I%20have%20a%20printing%20enquiry." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>WhatsApp</a>
+  <a class="wa" href="https://wa.me/919787570081?text=Hello%20Balaji%20Printerss%2C%20I%20have%20a%20printing%20enquiry." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>WhatsApp</a>
   <a class="q" href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h10l4 4v14H5z"/><path d="M9 12h6M9 16h6"/></svg>Get quote</a>
 </nav>
 
 <script>
-document.documentElement.classList.add('js');
-/* Bring the opening-screen animations to every section */
 (function(){
-  document.querySelectorAll('.sec .h2').forEach(function(h){ h.classList.add('words-pull-up'); });
-  ['.stats','.svc-grid','.unit','.steps','.roles','.team','.dl'].forEach(function(sel){
-    document.querySelectorAll(sel).forEach(function(g){
-      g.classList.remove('reveal');
-      Array.prototype.forEach.call(g.children, function(c, i){ c.classList.add('fade-up-reveal'); c.setAttribute('data-delay', (Math.min(i, 8)*0.08).toFixed(2)); });
-    });
-  });
-  document.querySelectorAll('.sec .lead, .sec .eyebrow').forEach(function(el){ el.classList.add('fade-up-reveal'); el.setAttribute('data-delay', el.classList.contains('lead') ? '0.25' : '0'); });
-})();
-document.getElementById('yr').textContent = new Date().getFullYear();
+  "use strict";
+  document.documentElement.classList.add('js');
+  document.getElementById('yr').textContent = new Date().getFullYear();
 
-// WhatsApp number used everywhere: country code + number, no spaces or +
-var WHATSAPP_NUMBER = '919787570081';
+  // Your own copy (upload background.mp4 next to index.html on GitHub) is tried first;
+  // the link is only a backup. For the smoothest scrub, encode the video "all-intra"
+  // (every frame a keyframe) so a scroll can land on any exact frame instantly.
+  var VIDEO_SOURCES = [
+    "background.mp4",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260506_031045_0e1165dd-ab48-46e3-ad3d-5fe77f217647.mp4"
+  ];
+  var WHATSAPP_NUMBER = "919787570081";
 
-/* Header glass on scroll + close mobile menu after choosing a link */
-(function(){
-  var bar = document.getElementById('bar'), t = document.getElementById('nav-open');
-  function s(){ bar.classList.toggle('scrolled', window.scrollY > 20); }
-  s(); window.addEventListener('scroll', s, {passive:true});
-  document.querySelectorAll('.navpanel a').forEach(function(a){ a.addEventListener('click', function(){ t.checked = false; }); });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') t.checked = false; });
-})();
+  var clip = document.getElementById("clip"), boot = document.getElementById("boot"),
+      bootBar = document.getElementById("bootBar"), bootPct = document.getElementById("bootPct"),
+      meter = document.getElementById("meter"), stage = document.getElementById("stage"),
+      art = document.getElementById("art"), footbar = document.getElementById("footbar"),
+      track = document.querySelector(".track"),
+      panels = [].slice.call(document.querySelectorAll("[data-panel]"));
 
-/* Reveal sections as they scroll in */
-(function(){
-  var els = document.querySelectorAll('.reveal');
-  if(!('IntersectionObserver' in window)){ els.forEach(function(e){ e.classList.add('in'); }); return; }
-  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -8% 0px'});
-  els.forEach(function(e){ io.observe(e); });
-})();
+  // Each panel owns a slice of the intro scroll. The gaps between one panel's fade-out
+  // and the next one's fade-in are deliberate dead zones (video only), so two panels
+  // are never readable at the same time.
+  var CUES = [
+    [0.00, 0.00, 0.15, 0.23],
+    [0.35, 0.43, 0.57, 0.65],
+    [0.77, 0.85, 1.10, 1.20]
+  ];
+  var DRIFT = 22;
 
-/* Hero: word pull-up + fade-up reveals */
-(function(){
-  document.querySelectorAll('.words-pull-up').forEach(function(el){
-    if(el.dataset.split) return; el.dataset.split = '1';
-    var idx = 0;
-    function wrap(target, text){
-      target.textContent = '';
-      text.trim().split(/\s+/).forEach(function(w){
-        var sp = document.createElement('span'); sp.className = 'pull-word'; sp.textContent = w;
-        sp.style.animationDelay = (idx++ * 0.1) + 's'; target.appendChild(sp);
-      });
+  function clamp(v,a,b){ return v < a ? a : v > b ? b : v; }
+  function smooth(t){ return t*t*(3-2*t); }
+  function ramp(p,a,b){ if(b <= a) return p >= b ? 1 : 0; return smooth(clamp((p-a)/(b-a),0,1)); }
+
+  var progress = 0, pageProgress = 0, seekTo = 0, seekAt = 0, duration = 0, ready = false, hasVideo = false;
+
+  function readScroll(){
+    var y = window.pageYOffset;
+    var introMax = track.offsetTop + track.offsetHeight - window.innerHeight;
+    progress = introMax > 0 ? clamp(y / introMax, 0, 1) : 0;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    pageProgress = max > 0 ? clamp(y / max, 0, 1) : 0;
+    if(duration) seekTo = progress * duration;
+  }
+
+  function paint(){
+    meter.style.transform = "scaleX(" + pageProgress + ")";
+    for(var i = 0; i < panels.length; i++){
+      var c = CUES[i], el = panels[i];
+      var enter = ramp(progress, c[0], c[1]), leave = ramp(progress, c[2], c[3]);
+      var o = enter * (1 - leave), y = (1 - enter) * DRIFT - leave * DRIFT;
+      el.style.opacity = o;
+      el.style.transform = "translate3d(0," + y + "px,0)";
+      el.style.pointerEvents = o > 0.6 ? "auto" : "none";
     }
-    var lines = el.tagName === 'H1' ? Array.prototype.filter.call(el.children, function(c){ return c.tagName === 'SPAN'; }) : [];
-    if(lines.length){ lines.forEach(function(l){ l.classList.add('pull-line'); wrap(l, l.textContent); }); }
-    else { wrap(el, el.textContent); }
-  });
-  var words = document.querySelectorAll('.words-pull-up'), fades = document.querySelectorAll('.fade-up-reveal');
-  if(!('IntersectionObserver' in window)){
-    words.forEach(function(e){ e.classList.add('words-visible'); });
-    fades.forEach(function(e){ e.classList.add('is-visible'); }); return;
-  }
-  var wo = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('words-visible'); wo.unobserve(e.target); } }); }, {threshold:0.2});
-  var fo = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){
-    e.target.style.animationDelay = (parseFloat(e.target.getAttribute('data-delay')) || 0) + 's';
-    e.target.classList.add('is-visible'); fo.unobserve(e.target); } }); }, {threshold:0.15});
-  words.forEach(function(e){ wo.observe(e); }); fades.forEach(function(e){ fo.observe(e); });
-})();
-
-/* Hero background video (pauses for reduced motion; canvas art stays as fallback) */
-(function(){
-  var v = document.getElementById('hero-video'), hero = document.querySelector('.hero');
-  if(!v) return;
-  var q = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
-  v.addEventListener('playing', function(){ hero.classList.add('has-video'); });
-  v.addEventListener('loadeddata', function(){ if(q && q.matches) hero.classList.add('has-video'); });
-  function sync(){ if(q && q.matches){ v.pause(); } else { var p = v.play(); if(p && p.catch) p.catch(function(){}); } }
-  sync();
-  if(q){ q.addEventListener ? q.addEventListener('change', sync) : q.addListener(sync); }
-  if('IntersectionObserver' in window){ new IntersectionObserver(function(es){
-    if(q && q.matches) return;
-    if(es[0].isIntersecting){ var p = v.play(); if(p && p.catch) p.catch(function(){}); } else { v.pause(); }
-  }).observe(hero); }
-})();
-
-/* Hero artwork: a blank screen that reveals the colour print under the cursor */
-(function(){
-  var hero = document.querySelector('.hero'), base = document.getElementById('art-base'), rev = document.getElementById('art-reveal'), thumb = document.getElementById('thumb');
-  if(!hero || !base.getContext) return;
-  var C = [[227,48,79],[196,178,242],[142,207,242]];
-  var rm = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : {matches:false};
-  var touchOnly = window.matchMedia ? window.matchMedia('(hover: none)').matches : false;
-  var W = 0, H = 0, geo = null;
-  function mix(a,b,t){ return [a[0]+(b[0]-a[0])*t, a[1]+(b[1]-a[1])*t, a[2]+(b[2]-a[2])*t]; }
-  function colAt(t){ t = ((t % 1) + 1) % 1; var k = t*3, n = Math.floor(k); return mix(C[n], C[(n+1)%3], k-n); }
-  function field(x, y, g){
-    var dx = x-g.cx, dy = y-g.cy, d = Math.sqrt(dx*dx+dy*dy), R = g.R, v = 0;
-    if(d < R) v = 0.22 + 0.78*Math.pow(1-d/R, 0.55);
-    var r1 = Math.abs(d - R*1.34)/(R*0.085); if(r1 < 1) v = Math.max(v, (1-r1)*0.85);
-    var r2 = Math.abs(d - R*1.66)/(R*0.045); if(r2 < 1) v = Math.max(v, (1-r2)*0.55);
-    var u = (dx + dy)/(R*1.4142), w = (dx - dy)/(R*0.22);
-    if(u > 1.85 && u < 2.75 && Math.abs(dx - dy) < R*2.6){ var ph = ((w % 2) + 2) % 2; if(ph < 1) v = Math.max(v, 0.5*(1 - Math.abs(u-2.3)/0.45)); }
-    return v;
-  }
-  function backdrop(ctx){
-    ctx.fillStyle = '#050816'; ctx.fillRect(0,0,W,H);
-    var g = ctx.createRadialGradient(geo.cx, geo.cy, 0, geo.cx, geo.cy, geo.R*3);
-    g.addColorStop(0,'rgba(44,56,120,.42)'); g.addColorStop(1,'rgba(44,56,120,0)');
-    ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
-  }
-  function regMark(ctx, x, y, col){
-    ctx.strokeStyle = col; ctx.lineWidth = 1;
-    ctx.beginPath(); ctx.arc(x, y, 9, 0, 6.283); ctx.moveTo(x-15, y); ctx.lineTo(x+15, y); ctx.moveTo(x, y-15); ctx.lineTo(x, y+15); ctx.stroke();
-  }
-  function draw(){
-    var r = hero.getBoundingClientRect(); W = Math.max(1, r.width); H = Math.max(1, r.height);
-    var dpr = Math.min(window.devicePixelRatio || 1, 2), mob = W < 768;
-    var win = document.getElementById('art-window'), wr = win ? win.getBoundingClientRect() : null;
-    if(mob && wr && wr.height){ geo = {cx:W*0.5, cy:wr.top - r.top + wr.height/2, R:Math.min(W*0.26, wr.height*0.3)}; }
-    else { geo = {cx:W*0.7, cy:H*0.45, R:Math.min(W,H)*0.27}; }
-    [base, rev].forEach(function(c){ c.width = Math.round(W*dpr); c.height = Math.round(H*dpr); });
-    var b = base.getContext('2d'), v = rev.getContext('2d');
-    b.setTransform(dpr,0,0,dpr,0,0); v.setTransform(dpr,0,0,dpr,0,0);
-    backdrop(b); v.clearRect(0,0,W,H);
-    var pc = document.createElement('canvas'); pc.width = pc.height = 6;
-    var pctx = pc.getContext('2d'); pctx.strokeStyle = 'rgba(180,195,235,.07)'; pctx.beginPath();
-    pctx.moveTo(0,.5); pctx.lineTo(6,.5); pctx.moveTo(.5,0); pctx.lineTo(.5,6); pctx.stroke();
-    b.fillStyle = b.createPattern(pc, 'repeat'); b.fillRect(0,0,W,H);
-    var glow = v.createRadialGradient(geo.cx, geo.cy, 0, geo.cx, geo.cy, geo.R*1.9);
-    glow.addColorStop(0,'rgba(196,178,242,.16)'); glow.addColorStop(1,'rgba(196,178,242,0)');
-    v.fillStyle = glow; v.fillRect(0,0,W,H);
-    var s = Math.max(8, Math.min(W,H)/60), row = 0;
-    b.lineWidth = 0.8;
-    for(var y = s/2; y < H + s; y += s*0.866, row++){
-      for(var x = (row % 2 ? s : s/2); x < W + s; x += s){
-        var val = field(x, y, geo); if(val < 0.04) continue;
-        var rad = s*0.5*Math.pow(val, 0.85);
-        b.strokeStyle = 'rgba(190,200,235,' + (0.07 + 0.13*val).toFixed(3) + ')';
-        b.beginPath(); b.arc(x, y, rad, 0, 6.283); b.stroke();
-        var dx = x-geo.cx, dy = y-geo.cy, c = colAt(Math.atan2(dy, dx)/6.283 + 0.5 + Math.sqrt(dx*dx+dy*dy)/(geo.R*5));
-        v.fillStyle = 'rgb(' + (c[0]|0) + ',' + (c[1]|0) + ',' + (c[2]|0) + ')';
-        v.beginPath(); v.arc(x, y, rad, 0, 6.283); v.fill();
-      }
+    footbar.style.opacity = 1 - ramp(progress, 0.9, 1);
+    if(!hasVideo){
+      art.style.transform = "translate(-50%,-50%) rotate(" + (progress * 40).toFixed(2) + "deg) scale(" + (1 + progress * 0.35).toFixed(3) + ")";
     }
-    var e = geo.R*1.95;
-    [[-1,-1],[1,-1],[-1,1],[1,1]].forEach(function(k){
-      regMark(b, geo.cx + k[0]*e, geo.cy + k[1]*e, 'rgba(200,210,240,.22)');
-      regMark(v, geo.cx + k[0]*e, geo.cy + k[1]*e, 'rgba(255,142,161,.85)');
-    });
-    if(thumb && thumb.getContext){
-      var tw = thumb.clientWidth || 86, th = thumb.clientHeight || 86;
-      thumb.width = Math.round(tw*dpr); thumb.height = Math.round(th*dpr);
-      var t = thumb.getContext('2d'); t.setTransform(dpr,0,0,dpr,0,0);
-      t.fillStyle = '#0B1030'; t.fillRect(0,0,tw,th);
-      var tg = {cx:tw*0.5, cy:th*0.5, R:Math.min(tw,th)*0.3}, ts = 5.2, tr = 0;
-      for(var ty = ts/2; ty < th + ts; ty += ts*0.866, tr++){
-        for(var tx = (tr % 2 ? ts : ts/2); tx < tw + ts; tx += ts){
-          var tv = field(tx, ty, tg); if(tv < 0.05) continue;
-          var tc = colAt(Math.atan2(ty-tg.cy, tx-tg.cx)/6.283 + 0.5);
-          t.fillStyle = 'rgb(' + (tc[0]|0) + ',' + (tc[1]|0) + ',' + (tc[2]|0) + ')';
-          t.beginPath(); t.arc(tx, ty, ts*0.5*Math.pow(tv, 0.85), 0, 6.283); t.fill();
+  }
+
+  function frame(){
+    if(ready && duration){
+      var gap = seekTo - seekAt;
+      if(Math.abs(gap) > 0.0008){
+        seekAt += gap * 0.115;   // easing toward the scroll target turns a jumpy scrub into a smooth one
+        if(clip.readyState >= 2 && !clip.seeking){
+          try { clip.currentTime = seekAt; } catch(e){}
         }
       }
     }
+    paint();
+    requestAnimationFrame(frame);
   }
 
-  /* Spotlight */
-  var tx = 0, ty = 0, cx = 0, cy = 0, rad = 0, tRad = 0, lastUser = -1e9, raf = 0, visible = true, started = false;
-  function radius(){ return window.innerWidth < 480 ? 120 : window.innerWidth < 720 ? 160 : 250; }
-  function setMask(){
-    var g = 'radial-gradient(circle ' + rad.toFixed(1) + 'px at ' + cx.toFixed(1) + 'px ' + cy.toFixed(1) + 'px, #fff 0%, #fff 40%, rgba(255,255,255,.75) 60%, rgba(255,255,255,.4) 75%, rgba(255,255,255,.12) 88%, transparent 100%)';
-    rev.style.webkitMaskImage = g; rev.style.maskImage = g;
-  }
-  function point(px, py){
-    var r = rev.getBoundingClientRect(), x = px - r.left, y = py - r.top;
-    if(y < 0 || y > r.height || x < 0 || x > r.width) return;
-    tx = x; ty = y; tRad = radius(); lastUser = performance.now(); kick();
-  }
-  function tick(now){
-    raf = 0;
-    if(touchOnly && !rm.matches && now - lastUser > 2500 && geo){
-      var k = now/1000;
-      tx = geo.cx + geo.R*1.1*Math.cos(k*0.32); ty = geo.cy + geo.R*0.8*Math.sin(k*0.47);
+  /* Fallback artwork: a soft halftone print in the brand colours (shown until / unless the video plays) */
+  function drawArt(){
+    if(!art.getContext) return;
+    var size = Math.max(window.innerWidth, window.innerHeight) * 1.2, dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    art.width = Math.round(size * dpr); art.height = Math.round(size * dpr);
+    var g = art.getContext("2d"); g.setTransform(dpr,0,0,dpr,0,0); g.clearRect(0,0,size,size);
+    var C = [[200,16,46],[185,166,234],[134,197,234]], cx = size/2, cy = size/2, R = size*0.17;
+    function col(t){ t = ((t%1)+1)%1; var k = t*3, n = Math.floor(k), a = C[n], b = C[(n+1)%3], f = k-n;
+      return [a[0]+(b[0]-a[0])*f, a[1]+(b[1]-a[1])*f, a[2]+(b[2]-a[2])*f]; }
+    var s = Math.max(10, size/90), row = 0;
+    for(var y = s/2; y < size; y += s*0.866, row++){
+      for(var x = (row%2 ? s : s/2); x < size; x += s){
+        var dx = x-cx, dy = y-cy, d = Math.sqrt(dx*dx+dy*dy), v = 0;
+        if(d < R) v = 0.2 + 0.8*Math.pow(1-d/R, 0.55);
+        var r1 = Math.abs(d-R*1.35)/(R*0.08); if(r1 < 1) v = Math.max(v,(1-r1)*0.8);
+        var r2 = Math.abs(d-R*1.7)/(R*0.04); if(r2 < 1) v = Math.max(v,(1-r2)*0.5);
+        if(v < 0.04) continue;
+        var c = col(Math.atan2(dy,dx)/6.283 + 0.5 + d/(R*5));
+        g.fillStyle = "rgba(" + (c[0]|0) + "," + (c[1]|0) + "," + (c[2]|0) + ",.26)";
+        g.beginPath(); g.arc(x, y, s*0.5*Math.pow(v,0.85), 0, 6.283); g.fill();
+      }
     }
-    var ease = rm.matches ? 1 : 0.14;
-    cx += (tx - cx)*ease; cy += (ty - cy)*ease; rad += (tRad - rad)*(rm.matches ? 1 : 0.08);
-    setMask();
-    var moving = Math.abs(tx-cx) > 0.3 || Math.abs(ty-cy) > 0.3 || Math.abs(tRad-rad) > 0.3;
-    if(visible && !document.hidden && (moving || (touchOnly && !rm.matches))) raf = requestAnimationFrame(tick);
   }
-  function kick(){ if(!raf && started) raf = requestAnimationFrame(tick); }
 
-  draw();
-  document.getElementById('hint').textContent = touchOnly ? 'Touch to reveal the print' : 'Move your cursor to reveal the print';
-  setTimeout(function(){
-    started = true; cx = tx = geo.cx; cy = ty = geo.cy; tRad = radius();
-    if(rm.matches) rad = tRad;
-    kick();
-  }, rm.matches ? 0 : 900);
+  /* Boot / loading */
+  function setProgress(f){
+    bootBar.style.transform = "scaleX(" + f + ")";
+    bootPct.textContent = "LOADING " + Math.round(f * 100) + "%";
+  }
+  var started = false;
+  function start(){
+    if(started) return; started = true;
+    ready = true; boot.classList.add("done"); readScroll(); seekAt = seekTo;
+  }
+  var attached = false;
+  function attach(src){
+    if(attached) return; attached = true;
+    clip.addEventListener("loadedmetadata", function(){
+      duration = clip.duration || 0; clip.pause(); readScroll(); seekAt = seekTo;
+      try { clip.currentTime = seekAt; } catch(e){}
+    });
+    clip.addEventListener("loadeddata", function(){ hasVideo = true; stage.classList.add("has-video"); start(); });
+    clip.addEventListener("canplaythrough", start);
+    clip.addEventListener("error", start);
+    clip.src = src; clip.load();
+    setTimeout(start, 12000);   // a stalled decode never strands the page behind the preloader
+  }
 
-  window.addEventListener('mousemove', function(e){ point(e.clientX, e.clientY); }, {passive:true});
-  window.addEventListener('touchmove', function(e){ if(e.touches[0]) point(e.touches[0].clientX, e.touches[0].clientY); }, {passive:true});
-  window.addEventListener('touchstart', function(e){ if(e.touches[0]) point(e.touches[0].clientX, e.touches[0].clientY); }, {passive:true});
-  document.addEventListener('visibilitychange', kick);
-  if('IntersectionObserver' in window){ new IntersectionObserver(function(es){ visible = es[0].isIntersecting; kick(); }).observe(hero); }
-  var lastW = window.innerWidth, rt;
-  function redraw(){ clearTimeout(rt); rt = setTimeout(function(){ draw(); tRad = radius(); if(started && !touchOnly){ tx = Math.min(tx, W); ty = Math.min(ty, H); } kick(); }, 150); }
-  if('ResizeObserver' in window){ var lw = 0, lh = 0; new ResizeObserver(function(){ var r = hero.getBoundingClientRect();
-    if(Math.abs(r.width - lw) > 2 || Math.abs(r.height - lh) > 40){ lw = r.width; lh = r.height; redraw(); } }).observe(hero); }
-  else { window.addEventListener('resize', function(){ if(window.innerWidth !== lastW){ lastW = window.innerWidth; redraw(); } }); }
+  // Fetch the video as one fully buffered blob first: seeking inside a buffered blob is
+  // near instant, while range requests over the network turn the scrub into a slideshow.
+  function fetchBlob(url, signal){
+    return fetch(url, {signal: signal}).then(function(res){
+      if(!res.ok || !res.body) throw new Error("bad response");
+      var total = +res.headers.get("content-length") || 0, got = 0, chunks = [], reader = res.body.getReader();
+      return new Promise(function(resolve, reject){
+        function pump(){
+          reader.read().then(function(r){
+            if(r.done){ resolve(new Blob(chunks, {type: "video/mp4"})); return; }
+            chunks.push(r.value); got += r.value.length;
+            setProgress(total ? got / total : Math.min(got / 11e6, 0.95));
+            pump();
+          }).catch(reject);
+        }
+        pump();
+      });
+    });
+  }
+  function preload(){
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var last = VIDEO_SOURCES[VIDEO_SOURCES.length - 1];
+    var bail = setTimeout(function(){
+      if(!attached){ if(ctrl) ctrl.abort(); setProgress(1); attach(last); }
+    }, 15000);
+    function tryAt(i){
+      if(i >= VIDEO_SOURCES.length) return Promise.reject(new Error("no source"));
+      return fetchBlob(VIDEO_SOURCES[i], ctrl ? ctrl.signal : undefined).catch(function(e){
+        if(e && e.name === "AbortError") throw e;
+        return tryAt(i + 1);
+      });
+    }
+    tryAt(0).then(function(blob){
+      clearTimeout(bail); setProgress(1); attach(URL.createObjectURL(blob));
+    }).catch(function(){
+      clearTimeout(bail); setProgress(1); attach(last);   // CORS failure, abort or offline: stream directly
+    });
+  }
+
+  // iOS will not paint a frame from a video that has never played, so nudge it once
+  // on the first interaction and pause straight away.
+  function unlock(){
+    var p = clip.play();
+    if(p && p.then) p.then(function(){ clip.pause(); }).catch(function(){});
+    else clip.pause();
+  }
+  ["touchstart","pointerdown","wheel","keydown"].forEach(function(ev){
+    window.addEventListener(ev, unlock, {once: true, passive: true});
+  });
+
+  /* Content reveal */
+  var rvs = document.querySelectorAll(".rv");
+  if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); }, {rootMargin: "0px 0px -8% 0px"});
+    rvs.forEach(function(e){ io.observe(e); });
+  } else { rvs.forEach(function(e){ e.classList.add("in"); }); }
+
+  /* Quote form -> WhatsApp */
+  document.getElementById("quote").addEventListener("submit", function(e){
+    e.preventDefault();
+    var name = document.getElementById("f-name").value.trim(), msg = document.getElementById("f-msg").value.trim(), err = document.getElementById("f-err");
+    if(!name || !msg){ err.textContent = "Please add your name and order details."; return; }
+    err.textContent = "";
+    var text = "New printing enquiry\nName: " + name + "\nCompany: " + document.getElementById("f-co").value.trim() +
+      "\nQuantity: " + document.getElementById("f-qty").value.trim() + "\nColours: " + document.getElementById("f-col").value + "\nDetails: " + msg;
+    window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text), "_blank", "noopener");
+  });
+
+  var rt;
+  window.addEventListener("scroll", readScroll, {passive: true});
+  window.addEventListener("resize", function(){ readScroll(); clearTimeout(rt); rt = setTimeout(drawArt, 200); });
+
+  drawArt();
+  readScroll();
+  paint();
+  preload();
+  requestAnimationFrame(frame);
 })();
-
-/* Quote form -> WhatsApp */
-document.getElementById('quote').addEventListener('submit', function(e){
-  e.preventDefault();
-  var name = document.getElementById('f-name').value.trim(), msg = document.getElementById('f-msg').value.trim(), err = document.getElementById('f-err');
-  if(!name || !msg){ err.textContent = 'Please add your name and order details.'; return; }
-  err.textContent = '';
-  var text = 'New printing enquiry\nName: ' + name + '\nCompany: ' + document.getElementById('f-co').value.trim() +
-    '\nQuantity: ' + document.getElementById('f-qty').value.trim() + '\nColours: ' + document.getElementById('f-col').value + '\nDetails: ' + msg;
-  window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
-});
 </script>
 </body>
 </html>
