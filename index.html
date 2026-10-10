@@ -93,7 +93,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .hero{--cream:#F3EEFF;--muted:rgba(243,238,255,.74);--label:rgba(243,238,255,.5);--card:rgba(8,10,26,.6);
   position:relative;width:100%;height:100vh;height:100svh;min-height:620px;overflow:hidden;background:var(--bg);color:var(--cream)}
 .art{position:absolute;inset:0;width:100%;height:100%;display:block}
-.art-base{z-index:1}
+.art-base{z-index:1;transition:opacity 1s ease}
+.hero-video{z-index:0;object-fit:cover;object-position:center;opacity:0;transition:opacity 1.2s ease;pointer-events:none}
+.hero.has-video .hero-video{opacity:1}
+.hero.has-video .art-base{opacity:0!important}
 .art-reveal{z-index:2;pointer-events:none;
   -webkit-mask-image:radial-gradient(circle 0px at -999px -999px,#fff,transparent);mask-image:radial-gradient(circle 0px at -999px -999px,#fff,transparent)}
 .hero-shade{position:absolute;inset:0;z-index:3;pointer-events:none;background:
@@ -306,6 +309,22 @@ form .cta{justify-self:start;border:0;cursor:pointer;font-family:inherit}
 @media (max-width:1000px){.roles{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.roles{grid-template-columns:1fr}.founder{grid-template-columns:1fr;gap:18px;padding:26px}}
 
+/* ---------- Site-wide: same look as the opening screen ---------- */
+body{background-color:var(--bg);background-image:linear-gradient(rgba(180,195,235,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(180,195,235,.035) 1px,transparent 1px);background-size:6px 6px}
+.h2,.band .h2{font-family:'Orbitron','Arial Narrow',sans-serif;font-weight:500;font-variation-settings:normal;text-transform:uppercase;letter-spacing:.02em;
+  font-size:clamp(1.45rem,3vw,2.35rem);line-height:1.15;color:#F3EEFF;text-wrap:balance}
+.eyebrow{display:flex;align-items:center;gap:9px;color:#FF8EA1;letter-spacing:.22em}
+.eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:#FF8EA1;box-shadow:0 0 10px #FF8EA1;flex:none}
+.glass{background:rgba(8,10,26,.6);border:1px solid rgba(243,238,255,.09);border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.25)}
+.svc h3,.mc h3,.steps h3,.role h3,.promise h3,.founder h3,form h3{font-family:'Orbitron','Arial Narrow',sans-serif;font-weight:500;font-variation-settings:normal;
+  text-transform:uppercase;letter-spacing:.04em;font-size:.92rem;line-height:1.4}
+.founder h3{font-size:1.15rem}
+.stat b,.mc .n,.names .nm{font-family:'Orbitron','Arial Narrow',sans-serif;font-weight:500;font-variation-settings:normal}
+.names .nm{font-size:clamp(1.8rem,4vw,3rem);text-transform:uppercase;letter-spacing:.02em}
+.svc .num,.steps .k{color:rgba(243,238,255,.5);letter-spacing:.14em}
+.stat span,.mc p,.svc p,.role p,.steps p{color:rgba(243,238,255,.68)}
+.dl small,.spec-label{color:rgba(243,238,255,.5)}
+
 footer{border-top:1px solid var(--line);padding:34px 0 40px;color:var(--sub);font-size:.88rem}
 footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
@@ -353,6 +372,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
 <main id="top">
   <section class="hero" aria-labelledby="hero-title">
+    <video class="art hero-video" id="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
+      <source src="background.mp4" type="video/mp4">
+      <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260506_031045_0e1165dd-ab48-46e3-ad3d-5fe77f217647.mp4" type="video/mp4">
+    </video>
     <canvas class="art art-base hero-image-animate" id="art-base" aria-hidden="true"></canvas>
     <canvas class="art art-reveal hero-image-animate" id="art-reveal" aria-hidden="true"></canvas>
     <div class="hero-shade" aria-hidden="true"></div>
@@ -568,6 +591,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
 <script>
 document.documentElement.classList.add('js');
+/* Bring the opening-screen animations to every section */
+(function(){
+  document.querySelectorAll('.sec .h2').forEach(function(h){ h.classList.add('words-pull-up'); });
+  ['.stats','.svc-grid','.unit','.steps','.roles','.team','.dl'].forEach(function(sel){
+    document.querySelectorAll(sel).forEach(function(g){
+      g.classList.remove('reveal');
+      Array.prototype.forEach.call(g.children, function(c, i){ c.classList.add('fade-up-reveal'); c.setAttribute('data-delay', (Math.min(i, 8)*0.08).toFixed(2)); });
+    });
+  });
+  document.querySelectorAll('.sec .lead, .sec .eyebrow').forEach(function(el){ el.classList.add('fade-up-reveal'); el.setAttribute('data-delay', el.classList.contains('lead') ? '0.25' : '0'); });
+})();
 document.getElementById('yr').textContent = new Date().getFullYear();
 
 // WhatsApp number used everywhere: country code + number, no spaces or +
@@ -618,6 +652,22 @@ var WHATSAPP_NUMBER = '919787570081';
   words.forEach(function(e){ wo.observe(e); }); fades.forEach(function(e){ fo.observe(e); });
 })();
 
+/* Hero background video (pauses for reduced motion; canvas art stays as fallback) */
+(function(){
+  var v = document.getElementById('hero-video'), hero = document.querySelector('.hero');
+  if(!v) return;
+  var q = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+  v.addEventListener('playing', function(){ hero.classList.add('has-video'); });
+  v.addEventListener('loadeddata', function(){ if(q && q.matches) hero.classList.add('has-video'); });
+  function sync(){ if(q && q.matches){ v.pause(); } else { var p = v.play(); if(p && p.catch) p.catch(function(){}); } }
+  sync();
+  if(q){ q.addEventListener ? q.addEventListener('change', sync) : q.addListener(sync); }
+  if('IntersectionObserver' in window){ new IntersectionObserver(function(es){
+    if(q && q.matches) return;
+    if(es[0].isIntersecting){ var p = v.play(); if(p && p.catch) p.catch(function(){}); } else { v.pause(); }
+  }).observe(hero); }
+})();
+
 /* Hero artwork: a blank screen that reveals the colour print under the cursor */
 (function(){
   var hero = document.querySelector('.hero'), base = document.getElementById('art-base'), rev = document.getElementById('art-reveal'), thumb = document.getElementById('thumb');
@@ -656,7 +706,7 @@ var WHATSAPP_NUMBER = '919787570081';
     [base, rev].forEach(function(c){ c.width = Math.round(W*dpr); c.height = Math.round(H*dpr); });
     var b = base.getContext('2d'), v = rev.getContext('2d');
     b.setTransform(dpr,0,0,dpr,0,0); v.setTransform(dpr,0,0,dpr,0,0);
-    backdrop(b); backdrop(v);
+    backdrop(b); v.clearRect(0,0,W,H);
     var pc = document.createElement('canvas'); pc.width = pc.height = 6;
     var pctx = pc.getContext('2d'); pctx.strokeStyle = 'rgba(180,195,235,.07)'; pctx.beginPath();
     pctx.moveTo(0,.5); pctx.lineTo(6,.5); pctx.moveTo(.5,0); pctx.lineTo(.5,6); pctx.stroke();
