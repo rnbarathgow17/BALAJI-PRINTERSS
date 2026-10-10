@@ -279,6 +279,47 @@ form .cta{justify-self:start;border:0;cursor:pointer;font-family:inherit}
 @media (max-width:900px){.contact{grid-template-columns:1fr}}
 @media (max-width:520px){.row2{grid-template-columns:1fr}form .cta{justify-self:stretch;justify-content:center}}
 
+/* Upload boxes */
+[hidden]{display:none!important}
+.uploads{border:0;padding:0;margin:0;min-width:0;display:grid;gap:14px}
+.uploads legend{padding:0;margin-bottom:10px;font-size:.88rem;color:var(--sub);font-variation-settings:'wght' 480}
+.uploads legend span{opacity:.75}
+.up-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.drop{display:flex;flex-direction:column;gap:8px;min-width:0}
+.drop-in{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:3px;min-height:150px;padding:18px 10px;
+  border:1.5px dashed rgba(196,214,232,.3);border-radius:16px;background:rgba(255,255,255,.03);cursor:pointer;color:var(--ink);transition:border-color .2s,background .2s}
+.drop-in input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;padding:0;border:0;font-size:0}
+.drop-in:hover,.drop-in.over{border-color:var(--sky);background:rgba(142,207,242,.08)}
+.drop-in:focus-within{outline:2px solid #9fe0ff;outline-offset:3px}
+.drop-in svg{width:28px;height:28px;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:6px}
+.drop-in.c1 svg{stroke:#FF8EA1}.drop-in.c2 svg{stroke:var(--lav)}.drop-in.c3 svg{stroke:var(--sky)}
+.drop-in b{font-weight:inherit;font-size:.98rem;font-variation-settings:'wght' 560;color:var(--ink)}
+.drop-in span{font-size:.78rem;line-height:1.35;color:var(--sub)}
+.drop-in em{font-style:normal;font-size:.78rem;color:var(--sky);margin-top:6px}
+.files{display:grid;gap:6px}
+.files li{display:flex;align-items:center;gap:8px;padding:6px;border-radius:10px;background:rgba(255,255,255,.05);min-width:0}
+.files .th{width:36px;height:36px;border-radius:8px;object-fit:cover;flex:none;background:rgba(227,48,79,.18);display:grid;place-items:center;font-size:.62rem;letter-spacing:.06em;color:#FFB3C0}
+.files .fn{flex:1;min-width:0}
+.files .nm{display:block;font-size:.8rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.files .fs{display:block;font-size:.7rem;color:var(--sub)}
+.files button{flex:none;width:34px;height:34px;border:0;border-radius:8px;background:transparent;color:var(--sub);font-size:1.25rem;line-height:1;cursor:pointer}
+.files button:hover{background:rgba(255,255,255,.08);color:#fff}
+.send-steps{display:none;gap:10px;padding:18px;border-radius:16px;background:rgba(142,207,242,.07);border:1px solid rgba(142,207,242,.25)}
+.send-steps.show{display:grid}
+.send-steps > p{font-size:.92rem;color:var(--feat)}
+.step-btn{display:flex;align-items:center;gap:14px;width:100%;padding:14px 16px;border-radius:14px;border:1px solid rgba(196,214,232,.25);background:rgba(255,255,255,.05);
+  color:#fff;font:inherit;font-size:1rem;font-variation-settings:'wght' 540;text-align:left;cursor:pointer;transition:background .2s}
+.step-btn:hover:not(:disabled){background:rgba(255,255,255,.1)}
+.step-btn:disabled{opacity:.45;cursor:default}
+.step-btn small{display:block;font-size:.8rem;color:var(--sub);font-variation-settings:'wght' 420;margin-top:2px}
+.step-btn .no{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none;background:#1FA855;font-size:.88rem}
+.step-btn.done .no{background:var(--sky);color:#0A1026}
+.send-help{font-size:.9rem;color:#fff;font-variation-settings:'wght' 480}
+.send-help:empty{display:none}
+.step-edit{justify-self:start;background:none;border:0;padding:6px 0;color:var(--sky);font:inherit;font-size:.9rem;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:1100px) and (min-width:901px){.up-grid{grid-template-columns:1fr}.drop-in{min-height:110px}}
+@media (max-width:640px){.up-grid{grid-template-columns:1fr}.drop-in{min-height:118px}}
+
 footer{border-top:1px solid var(--line);padding:34px 0 40px;color:var(--sub);font-size:.88rem}
 footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
@@ -480,9 +521,40 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
           <label>Number of colours<select id="f-col"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></label>
         </div>
         <label>Order details<textarea id="f-msg" placeholder="Garment type, print size, deadline"></textarea></label>
+        <fieldset class="uploads">
+          <legend>Attach files <span>(optional · images or PDF, up to 15 MB each)</span></legend>
+          <div class="up-grid">
+            <div class="drop" data-key="Artwork">
+              <label class="drop-in c1"><input type="file" accept="image/*,application/pdf,.pdf" multiple>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                <b>Artwork</b><span>Your design or logo files</span><em>Tap or drop files here</em></label>
+              <ul class="files"></ul>
+            </div>
+            <div class="drop" data-key="Sample Images">
+              <label class="drop-in c2"><input type="file" accept="image/*,application/pdf,.pdf" multiple>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                <b>Sample Images</b><span>Photos of a similar print or garment</span><em>Tap or drop files here</em></label>
+              <ul class="files"></ul>
+            </div>
+            <div class="drop" data-key="Colour Requirement">
+              <label class="drop-in c3"><input type="file" accept="image/*,application/pdf,.pdf" multiple>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.7-.8 1.7-1.7 0-.4-.2-.8-.4-1.1-.3-.3-.4-.7-.4-1.1 0-.9.8-1.7 1.7-1.7h2c3.1 0 5.6-2.5 5.6-5.6C22 6 17.5 2 12 2z"/></svg>
+                <b>Colour Requirement</b><span>Pantone shades or colour references</span><em>Tap or drop files here</em></label>
+              <ul class="files"></ul>
+            </div>
+          </div>
+          <label>Colour codes <span style="opacity:.75">(optional)</span><input id="f-pantone" placeholder="e.g. Pantone 186 C, Navy, White"></label>
+        </fieldset>
         <p class="err" id="f-err" role="alert"></p>
-        <button type="submit" class="cta"><span>Send on WhatsApp</span><svg class="arrow" viewBox="0 0 16 11" aria-hidden="true"><path d="M0 5.5 H14.6 M10.3 1.2 L14.9 5.5 L10.3 9.8"/></svg></button>
-        <p class="note">This opens WhatsApp with your details filled in.</p>
+        <button type="submit" class="cta" id="send-main"><span>Send on WhatsApp</span><svg class="arrow" viewBox="0 0 16 11" aria-hidden="true"><path d="M0 5.5 H14.6 M10.3 1.2 L14.9 5.5 L10.3 9.8"/></svg></button>
+        <div class="send-steps" id="send-steps" aria-live="polite">
+          <p>Two quick steps to send your enquiry and files to us on WhatsApp:</p>
+          <button type="button" class="step-btn" id="step1"><span class="no">1</span><span>Send your order details<small>Opens a chat with Balaji Printerss. Press send there, then come back here.</small></span></button>
+          <button type="button" class="step-btn" id="step2" disabled><span class="no">2</span><span>Send your files<small>Choose WhatsApp, then the Balaji Printerss chat at the top.</small></span></button>
+          <p class="send-help" id="send-help"></p>
+          <button type="button" class="step-edit" id="step-edit">Edit my enquiry</button>
+        </div>
+        <p class="note" id="send-note">This opens WhatsApp with your details filled in.</p>
       </form>
     </div>
   </section>
@@ -610,16 +682,142 @@ var WHATSAPP_NUMBER = '919787570081';
   if(rm.addEventListener) rm.addEventListener('change', run); else if(rm.addListener) rm.addListener(run);
 })();
 
-/* Quote form -> WhatsApp */
-document.getElementById('quote').addEventListener('submit', function(e){
-  e.preventDefault();
-  var name = document.getElementById('f-name').value.trim(), msg = document.getElementById('f-msg').value.trim(), err = document.getElementById('f-err');
-  if(!name || !msg){ err.textContent = 'Please add your name and order details.'; return; }
-  err.textContent = '';
-  var text = 'New printing enquiry\nName: ' + name + '\nCompany: ' + document.getElementById('f-co').value.trim() +
-    '\nQuantity: ' + document.getElementById('f-qty').value.trim() + '\nColours: ' + document.getElementById('f-col').value + '\nDetails: ' + msg;
-  window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
-});
+/* Quote form: details + Artwork / Sample Images / Colour Requirement files -> WhatsApp */
+(function(){
+  // Optional upgrade: fill these after creating a free Cloudinary account with an
+  // unsigned upload preset. Files are then uploaded and sent as links in ONE WhatsApp message.
+  var CLOUD_NAME = '', UPLOAD_PRESET = '';
+  var MAX_FILES = 5, MAX_MB = 15;
+  var form = document.getElementById('quote'), errEl = document.getElementById('f-err');
+  var mainBtn = document.getElementById('send-main'), note = document.getElementById('send-note');
+  var steps = document.getElementById('send-steps'), b1 = document.getElementById('step1'), b2 = document.getElementById('step2');
+  var help = document.getElementById('send-help'), editBtn = document.getElementById('step-edit');
+  var drops = Array.prototype.slice.call(document.querySelectorAll('.drop')), store = {};
+  var pendingText = '', pendingFiles = [];
+
+  function fmt(b){ return b >= 1048576 ? (b/1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(b/1024)) + ' KB'; }
+  function isPdf(f){ return f.type === 'application/pdf' || /\.pdf$/i.test(f.name); }
+  function isImg(f){ return f.type.indexOf('image/') === 0; }
+  function waUrl(t){ return 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(t); }
+
+  function render(d){
+    var key = d.getAttribute('data-key'), ul = d.querySelector('.files');
+    ul.innerHTML = '';
+    store[key].forEach(function(f, i){
+      var li = document.createElement('li'), th;
+      if(isImg(f)){ th = document.createElement('img'); th.alt = ''; th.src = URL.createObjectURL(f); th.onload = function(){ URL.revokeObjectURL(th.src); }; }
+      else { th = document.createElement('span'); th.textContent = 'PDF'; }
+      th.className = 'th';
+      var fn = document.createElement('div'); fn.className = 'fn';
+      var nm = document.createElement('span'); nm.className = 'nm'; nm.textContent = f.name;
+      var fs = document.createElement('span'); fs.className = 'fs'; fs.textContent = fmt(f.size);
+      fn.appendChild(nm); fn.appendChild(fs);
+      var rm = document.createElement('button'); rm.type = 'button'; rm.textContent = '\u00d7';
+      rm.setAttribute('aria-label', 'Remove ' + f.name);
+      rm.addEventListener('click', function(){ store[key].splice(i, 1); render(d); resetSteps(); });
+      li.appendChild(th); li.appendChild(fn); li.appendChild(rm); ul.appendChild(li);
+    });
+    d.querySelector('em').textContent = store[key].length ? store[key].length + ' added \u00b7 tap to add more' : 'Tap or drop files here';
+  }
+
+  drops.forEach(function(d){
+    var key = d.getAttribute('data-key'), inp = d.querySelector('input'), box = d.querySelector('.drop-in');
+    store[key] = [];
+    inp.addEventListener('change', function(){
+      var msg = '';
+      Array.prototype.forEach.call(inp.files, function(f){
+        if(!isImg(f) && !isPdf(f)){ msg = 'Only images (JPG, PNG) or PDF files can be added.'; return; }
+        if(f.size > MAX_MB * 1048576){ msg = f.name + ' is larger than ' + MAX_MB + ' MB.'; return; }
+        if(store[key].length >= MAX_FILES){ msg = 'You can add up to ' + MAX_FILES + ' files in each box.'; return; }
+        store[key].push(f);
+      });
+      inp.value = ''; errEl.textContent = msg; render(d); resetSteps();
+    });
+    ['dragenter','dragover'].forEach(function(ev){ box.addEventListener(ev, function(){ box.classList.add('over'); }); });
+    ['dragleave','drop'].forEach(function(ev){ box.addEventListener(ev, function(){ box.classList.remove('over'); }); });
+  });
+
+  function fileList(){
+    var out = [];
+    drops.forEach(function(d){ var k = d.getAttribute('data-key'); if(store[k].length) out.push(k + ': ' + store[k].map(function(f){ return f.name; }).join(', ')); });
+    return out;
+  }
+  function allFiles(){
+    var out = [];
+    drops.forEach(function(d){
+      var k = d.getAttribute('data-key');
+      store[k].forEach(function(f){
+        try { out.push(new File([f], k + ' - ' + f.name, {type: f.type || (isPdf(f) ? 'application/pdf' : '')})); }
+        catch(e){ out.push(f); }
+      });
+    });
+    return out;
+  }
+  function resetSteps(){
+    steps.classList.remove('show'); mainBtn.hidden = false; note.hidden = false;
+    b1.classList.remove('done'); b2.classList.remove('done'); b2.disabled = true; b2.hidden = false;
+    b1.querySelector('.no').textContent = '1'; b2.querySelector('.no').textContent = '2'; help.textContent = '';
+  }
+  function showSteps(text, files){
+    pendingText = text; pendingFiles = files;
+    mainBtn.hidden = true; note.hidden = true; steps.classList.add('show');
+    b2.hidden = !files.length; b1.focus();
+  }
+  function manualAttach(){
+    help.textContent = 'In the WhatsApp chat with Balaji Printerss, tap the attach button (\ud83d\udcce) and choose these files: ' +
+      pendingFiles.map(function(f){ return f.name.replace(/^[^-]+ - /, ''); }).join(', ');
+    b2.classList.add('done'); b2.querySelector('.no').textContent = '\u2713';
+  }
+
+  b1.addEventListener('click', function(){
+    window.open(waUrl(pendingText), '_blank', 'noopener');
+    b1.classList.add('done'); b1.querySelector('.no').textContent = '\u2713';
+    if(pendingFiles.length){ b2.disabled = false; help.textContent = 'After sending the message in WhatsApp, come back and tap step 2.'; }
+    else { help.textContent = 'Thank you! Send the message in WhatsApp and we will reply soon.'; }
+  });
+  b2.addEventListener('click', function(){
+    if(navigator.canShare && navigator.share && navigator.canShare({files: pendingFiles})){
+      navigator.share({files: pendingFiles}).then(function(){
+        b2.classList.add('done'); b2.querySelector('.no').textContent = '\u2713';
+        help.textContent = 'Thank you! We have your enquiry and files, and we will reply soon.';
+      }).catch(function(e){ if(!e || e.name !== 'AbortError') manualAttach(); });
+    } else { manualAttach(); }
+  });
+  editBtn.addEventListener('click', function(){ resetSteps(); mainBtn.focus(); });
+
+  function uploadAll(files, text){
+    var label = mainBtn.querySelector('span'), done = 0;
+    mainBtn.disabled = true; label.textContent = 'Uploading 0 of ' + files.length + '\u2026';
+    Promise.all(files.map(function(f){
+      var fd = new FormData(); fd.append('file', f); fd.append('upload_preset', UPLOAD_PRESET);
+      return fetch('https://api.cloudinary.com/v1_1/' + CLOUD_NAME + '/auto/upload', {method: 'POST', body: fd})
+        .then(function(r){ if(!r.ok) throw new Error('upload'); return r.json(); })
+        .then(function(j){ done++; label.textContent = 'Uploading ' + done + ' of ' + files.length + '\u2026'; return f.name + ': ' + j.secure_url; });
+    })).then(function(links){
+      mainBtn.disabled = false; label.textContent = 'Send on WhatsApp';
+      showSteps(text + '\n\nFiles:\n' + links.join('\n'), []);
+    }).catch(function(){
+      mainBtn.disabled = false; label.textContent = 'Send on WhatsApp';
+      errEl.textContent = 'Upload did not work. You can still send the files directly on WhatsApp.';
+      showSteps(text + '\n\nI am sending ' + files.length + ' file(s) next:\n' + fileList().join('\n'), files);
+    });
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('f-name').value.trim(), msg = document.getElementById('f-msg').value.trim();
+    if(!name || !msg){ errEl.textContent = 'Please add your name and order details.'; return; }
+    errEl.textContent = '';
+    var pant = document.getElementById('f-pantone').value.trim();
+    var text = 'New printing enquiry\nName: ' + name + '\nCompany: ' + document.getElementById('f-co').value.trim() +
+      '\nQuantity: ' + document.getElementById('f-qty').value.trim() + '\nColours: ' + document.getElementById('f-col').value +
+      (pant ? '\nColour codes: ' + pant : '') + '\nDetails: ' + msg;
+    var files = allFiles();
+    if(!files.length){ window.open(waUrl(text), '_blank', 'noopener'); return; }
+    if(CLOUD_NAME && UPLOAD_PRESET){ uploadAll(files, text); return; }
+    showSteps(text + '\n\nI am sending ' + files.length + ' file(s) next:\n' + fileList().join('\n'), files);
+  });
+})();
 </script>
 </body>
 </html>
