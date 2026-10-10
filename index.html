@@ -85,9 +85,9 @@ ul,ol{padding:0;list-style:none}
 .panel{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
   padding:max(104px,calc(env(safe-area-inset-top,0px) + 88px)) clamp(20px,5vw,60px) max(96px,calc(env(safe-area-inset-bottom,0px) + 80px));
   opacity:0;will-change:opacity,transform}
-.eyebrow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px 10px;font-size:clamp(15px,1.35vw,19px);font-weight:700;letter-spacing:.03em;color:#5E5B57;
+.eyebrow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px 10px;font-size:clamp(15px,1.35vw,19px);font-weight:700;letter-spacing:.03em;color:#fff;
   margin-bottom:clamp(18px,2.2vw,26px);max-width:min(52ch,100%);text-align:center}
-.eyebrow span{opacity:.6}
+.eyebrow mark{background:#0d0c0b;color:#fff;padding:.22em .55em;border-radius:5px;line-height:1.5;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 h1{font-weight:400;font-size:clamp(34px,7.1vw,104px);line-height:.98;letter-spacing:-.036em;max-width:15ch;text-wrap:balance}
 .sub{margin-top:clamp(18px,2.2vw,28px);font-size:clamp(15px,1.28vw,19px);line-height:1.5;letter-spacing:-.008em;color:var(--fg-soft);max-width:min(46ch,100%);text-wrap:pretty}
 .cta{margin-top:clamp(28px,3.4vw,44px);pointer-events:auto;width:100%;display:flex;justify-content:center}
@@ -255,8 +255,7 @@ form .pill{justify-self:start;height:48px;padding:0 27px;font-size:15px}
   .mark-star{display:none}
   .nav .pill{height:36px;padding:0 14px;font-size:13px}
   h1{max-width:11ch;font-size:clamp(28px,10.5vw,40px)}
-  .eyebrow{font-size:14px;letter-spacing:.02em;max-width:30ch;flex-direction:column;gap:2px}
-  .eyebrow span{display:none}
+  .eyebrow{font-size:14px;letter-spacing:.02em;max-width:30ch;flex-direction:column;gap:6px}
   .cta .pill{width:100%;max-width:280px;height:44px;padding:0 20px;font-size:14px}
 }
 @media (max-height:520px) and (orientation:landscape){
@@ -295,19 +294,19 @@ form .pill{justify-self:start;height:48px;padding:0 27px;font-size:15px}
 
 <main class="panels" id="top">
   <section class="panel" data-panel>
-    <p class="eyebrow">Textile screen printing <span>&middot;</span> Pollikalipalayam, Tiruppur</p>
+    <p class="eyebrow"><mark>Textile screen printing</mark><mark>Pollikalipalayam, Tiruppur</mark></p>
     <h1>Printed right.<br>Delivered on time.</h1>
     <p class="sub">Automatic M&amp;R printing, in-house screens, artwork and colour matching for garment exporters and fashion brands.</p>
     <div class="cta"><a class="pill" href="#contact">Get a quote</a></div>
   </section>
   <section class="panel" data-panel>
-    <p class="eyebrow">On our floor</p>
+    <p class="eyebrow"><mark>On our floor</mark></p>
     <h1>Every colour, in its place.</h1>
     <p class="sub">Two M&amp;R automatic machines, four manual machines and four tables, so every order gets the right setup.</p>
     <div class="cta"><a class="pill" href="#unit">See our unit</a></div>
   </section>
   <section class="panel" data-panel>
-    <p class="eyebrow">From artwork to delivery</p>
+    <p class="eyebrow"><mark>From artwork to delivery</mark></p>
     <h1>One unit.<br>Every step.</h1>
     <p class="sub">Screens, colour matching, printing, curing and delivery within 45 km, all handled by our own team.</p>
     <div class="cta"><a class="pill" href="#contact">Send your requirement</a></div>
