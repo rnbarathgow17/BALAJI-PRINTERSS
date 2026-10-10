@@ -57,7 +57,7 @@ ul,ol{padding:0;list-style:none}
 .chrome{position:fixed;left:0;right:0;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:12px;
   padding:max(14px,calc(env(safe-area-inset-top,0px) + 12px)) var(--side) 14px;
   background:linear-gradient(to bottom,rgba(242,240,236,.94) 0%,rgba(242,240,236,.78) 72%,rgba(242,240,236,0) 100%)}
-.mark{display:flex;align-items:center;gap:10px;font-size:20px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg);min-width:0;flex-shrink:1;text-decoration:none;font-weight:700;white-space:nowrap}
+.mark{display:flex;align-items:center;gap:10px;font-size:28px;line-height:1;letter-spacing:-.036em;color:var(--fg);min-width:0;flex-shrink:1;text-decoration:none;font-weight:500;white-space:nowrap}
 .mark-star{position:relative;width:28px;height:22px;flex:none;opacity:1}
 .mark-star i{position:absolute;width:15px;height:15px;border-radius:50%;mix-blend-mode:multiply}
 .mark-star i:nth-child(1){left:0;top:0;background:var(--cherry)}
@@ -234,7 +234,7 @@ form .pill{justify-self:start;height:48px;padding:0 27px;font-size:15px}
 }
 @media (max-width:720px){
   .nav a:not(.pill){display:none}
-  .mark{font-size:16px;letter-spacing:.03em;gap:8px}
+  .mark{font-size:21px;letter-spacing:-.03em;gap:8px}
   .mark-star{width:22px;height:18px}
   .mark-star i{width:12px;height:12px}
   .mark-star i:nth-child(2){left:9px}
@@ -258,7 +258,7 @@ form .pill{justify-self:start;height:48px;padding:0 27px;font-size:15px}
   .founder{grid-template-columns:1fr;gap:18px}
 }
 @media (max-width:420px){
-  .mark{font-size:15px;letter-spacing:.02em}
+  .mark{font-size:19px;letter-spacing:-.03em}
   .nav .pill{height:36px;padding:0 14px;font-size:13px}
   h1{max-width:11ch;font-size:clamp(28px,10.5vw,40px)}
   .eyebrow{font-size:14px;letter-spacing:.02em;max-width:30ch;flex-direction:column;gap:2px}
