@@ -313,6 +313,7 @@ form .cta{justify-self:start;border:0;cursor:pointer;font-family:inherit}
 .step-btn:disabled{opacity:.45;cursor:default}
 .step-btn small{display:block;font-size:.8rem;color:var(--sub);font-variation-settings:'wght' 420;margin-top:2px}
 .step-btn .no{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none;background:#1FA855;font-size:.88rem}
+.step-btn.next{border-color:#1FA855;background:rgba(31,168,85,.16);box-shadow:0 0 0 3px rgba(31,168,85,.22)}
 .step-btn.done .no{background:var(--sky);color:#0A1026}
 .send-help{font-size:.9rem;color:#fff;font-variation-settings:'wght' 480}
 .send-help:empty{display:none}
@@ -550,7 +551,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
         <div class="send-steps" id="send-steps" aria-live="polite">
           <p>Two quick steps to send your enquiry and files to us on WhatsApp:</p>
           <button type="button" class="step-btn" id="step1"><span class="no">1</span><span>Send your order details<small>Opens a chat with Balaji Printerss. Press send there, then come back here.</small></span></button>
-          <button type="button" class="step-btn" id="step2" disabled><span class="no">2</span><span>Send your files<small>Choose WhatsApp, then the Balaji Printerss chat at the top.</small></span></button>
+          <button type="button" class="step-btn" id="step2" disabled><span class="no">2</span><span>Send your pictures<small>Choose WhatsApp, then the Balaji Printerss chat at the top. Your pictures go as real photos.</small></span></button>
           <p class="send-help" id="send-help"></p>
           <button type="button" class="step-edit" id="step-edit">Edit my enquiry</button>
         </div>
@@ -742,6 +743,15 @@ var WHATSAPP_NUMBER = '919787570081';
     drops.forEach(function(d){ var k = d.getAttribute('data-key'); if(store[k].length) out.push(k + ': ' + store[k].map(function(f){ return f.name; }).join(', ')); });
     return out;
   }
+  function filesNote(files){
+    var cats = drops.filter(function(d){ return store[d.getAttribute('data-key')].length; }).map(function(d){ return d.getAttribute('data-key'); });
+    return '\ud83d\udcce I am sending ' + files.length + (files.length > 1 ? ' pictures/files' : ' picture/file') + ' next in this chat (' + cats.join(', ') + ').';
+  }
+  var canFileShare = false;
+  try { canFileShare = !!(navigator.canShare && navigator.share && navigator.canShare({files: [new File(['x'], 'test.jpg', {type: 'image/jpeg'})]})); } catch(e){}
+  if(!canFileShare){
+    b2.querySelector('span:last-child').innerHTML = 'Attach your pictures in WhatsApp<small>In the Balaji Printerss chat, tap the \ud83d\udcce attach button and choose the same pictures.</small>';
+  }
   function allFiles(){
     var out = [];
     drops.forEach(function(d){
@@ -755,7 +765,7 @@ var WHATSAPP_NUMBER = '919787570081';
   }
   function resetSteps(){
     steps.classList.remove('show'); mainBtn.hidden = false; note.hidden = false;
-    b1.classList.remove('done'); b2.classList.remove('done'); b2.disabled = true; b2.hidden = false;
+    b1.classList.remove('done'); b2.classList.remove('done'); b2.classList.remove('next'); b2.disabled = true; b2.hidden = false;
     b1.querySelector('.no').textContent = '1'; b2.querySelector('.no').textContent = '2'; help.textContent = '';
   }
   function showSteps(text, files){
@@ -764,21 +774,22 @@ var WHATSAPP_NUMBER = '919787570081';
     b2.hidden = !files.length; b1.focus();
   }
   function manualAttach(){
-    help.textContent = 'In the WhatsApp chat with Balaji Printerss, tap the attach button (\ud83d\udcce) and choose these files: ' +
+    help.textContent = 'Sending pictures straight from the website works on mobile phones. Here, open the WhatsApp chat with Balaji Printerss, tap the \ud83d\udcce attach button and choose: ' +
       pendingFiles.map(function(f){ return f.name.replace(/^[^-]+ - /, ''); }).join(', ');
-    b2.classList.add('done'); b2.querySelector('.no').textContent = '\u2713';
+    b2.classList.add('done'); b2.classList.remove('next'); b2.querySelector('.no').textContent = '\u2713';
   }
 
   b1.addEventListener('click', function(){
     window.open(waUrl(pendingText), '_blank', 'noopener');
     b1.classList.add('done'); b1.querySelector('.no').textContent = '\u2713';
-    if(pendingFiles.length){ b2.disabled = false; help.textContent = 'After sending the message in WhatsApp, come back and tap step 2.'; }
+    if(pendingFiles.length){ b2.disabled = false; b2.classList.add('next');
+      help.textContent = canFileShare ? 'Important: after sending the message, come back to this page and tap step 2 to send your pictures.' : 'Important: now attach your pictures in the WhatsApp chat with the \ud83d\udcce button.'; }
     else { help.textContent = 'Thank you! Send the message in WhatsApp and we will reply soon.'; }
   });
   b2.addEventListener('click', function(){
     if(navigator.canShare && navigator.share && navigator.canShare({files: pendingFiles})){
       navigator.share({files: pendingFiles}).then(function(){
-        b2.classList.add('done'); b2.querySelector('.no').textContent = '\u2713';
+        b2.classList.add('done'); b2.classList.remove('next'); b2.querySelector('.no').textContent = '\u2713';
         help.textContent = 'Thank you! We have your enquiry and files, and we will reply soon.';
       }).catch(function(e){ if(!e || e.name !== 'AbortError') manualAttach(); });
     } else { manualAttach(); }
@@ -799,7 +810,7 @@ var WHATSAPP_NUMBER = '919787570081';
     }).catch(function(){
       mainBtn.disabled = false; label.textContent = 'Send on WhatsApp';
       errEl.textContent = 'Upload did not work. You can still send the files directly on WhatsApp.';
-      showSteps(text + '\n\nI am sending ' + files.length + ' file(s) next:\n' + fileList().join('\n'), files);
+      showSteps(text + '\n\n' + filesNote(files), files);
     });
   }
 
@@ -815,7 +826,7 @@ var WHATSAPP_NUMBER = '919787570081';
     var files = allFiles();
     if(!files.length){ window.open(waUrl(text), '_blank', 'noopener'); return; }
     if(CLOUD_NAME && UPLOAD_PRESET){ uploadAll(files, text); return; }
-    showSteps(text + '\n\nI am sending ' + files.length + ' file(s) next:\n' + fileList().join('\n'), files);
+    showSteps(text + '\n\n' + filesNote(files), files);
   });
 })();
 </script>
